@@ -3,7 +3,8 @@
 > **Đơn vị:** Khoa Khoa học Máy tính — Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn (VKU)  
 > **Giảng viên hướng dẫn:** TS. Nguyễn Thanh Tuấn  
 > **Mã nguồn GitHub:** [https://github.com/pdthang125/Trekking](https://github.com/pdthang125/Trekking)  
-> **Thời lượng:** 13 Tuần (Tuần 1 — Tuần 13)
+> **Thời lượng thực hiện:** 7 Tuần Tăng Tốc (Tuần 1 — Tuần 7 Bảo Vệ)
+> **Chiến lược phân bổ:** Member 1 (Leader) trực tiếp nắm giữ 4 lõi kỹ thuật khó nhất trên Mobile (TFLite Inference Engine, Background GPS Engine, Offline Map Tile Caching, Hardware SOS Controller).
 
 ---
 
@@ -128,65 +129,52 @@ Dự án đã được khởi tạo hoàn chỉnh theo mô hình **Clean Archite
 
 ---
 
-## PHẦN 2: BẢNG PHÂN CHIA CÔNG VIỆC CHI TIẾT 3 THÀNH VIÊN (TUẦN 2 — TUẦN 13)
+## PHẦN 2: BẢNG PHÂN CHIA CÔNG VIỆC TĂNG TỐC 7 TUẦN (MEMBER 1 GÁNH LÕI KỸ THUẬT)
+
+Do thời gian rút ngắn còn **7 tuần**, Leader (Member 1) không chỉ làm kiến trúc nền mà trực tiếp đảm nhận **4 mô-đun kỹ thuật nặng nhất trên Mobile** để tránh nghẽn tiến độ và khẳng định vai trò kỹ thuật nòng cốt trước Hội đồng chấm thi VKU.
 
 ### 👑 MEMBER 1: LEADER / FULL-STACK MOBILE ARCHITECT (Bạn)
-> **Trách nhiệm chính:** Kiến trúc hệ thống, BLoC State Management, Cơ sở dữ liệu Drift SQLite, Tích hợp TFLite vào Mobile, Điều phối và Kiểm thử.
+> **Trách nhiệm chính:** Kiến trúc Clean Architecture, Bộ máy suy luận On-Device TFLite, Background GPS Engine, Offline Map Tile Caching, Hardware SOS Alert, Tích hợp & Đóng gói Release.
 
 | Tuần | Giai đoạn | Chi tiết công việc cụ thể | File/Mô-đun phụ trách |
 | :---: | :--- | :--- | :--- |
-| **Tuần 2** | Code Generation & Wiring | - Chạy `build_runner` sinh code Drift DB (`app_database.g.dart`) & DI (`injection_container.config.dart`).<br>- Hoàn thiện kết nối giữa BLoC và Repositories.<br>- Tạo Supabase project và lấy URL / Anon Key đưa vào biến môi trường. | `lib/core/di/`<br>`lib/core/database/`<br>`.env` |
-| **Tuần 3** | TFLite Engine Integration | - Cấu hình `tflite_flutter` trên cả Android & iOS.<br>- Viết `TfliteService` nạp model `.tflite` từ assets và chạy suy luận (Inference) offline.<br>- Kết nối kết quả phân loại từ TFLite vào `FirstAidBloc`. | `lib/features/first_aid/data/datasources/first_aid_ai_service.dart` |
-| **Tuần 4** | Offline Tile Storage | - Xây dựng cơ chế tải và cache gạch bản đồ (Map Tiles) từ OpenStreetMap vào bộ nhớ điện thoại (`flutter_map_cache`).<br>- Xử lý quản lý dung lượng cache (giới hạn tối đa 500MB). | `lib/features/navigation/data/datasources/tile_cache_manager.dart` |
-| **Tuần 5** | Background GPS Engine | - Tối ưu hoá Background Service ghi toạ độ GPS khi tắt màn hình bằng `flutter_foreground_task`.<br>- Tối ưu mức tiêu thụ pin khi ghi toạ độ liên tục nhiều giờ. | `lib/features/navigation/data/datasources/gps_service.dart` |
-| **Tuần 6** | Real-time Sync & PostGIS | - Kiểm thử cơ chế `SyncService` khi bật/tắt mạng giả lập.<br>- Đồng bộ toạ độ lên bảng `track_points` của Supabase bằng PostGIS SQL format. | `lib/core/network/sync_service.dart` |
-| **Tuần 7** | Gemini Online Fallback | - Tích hợp `google_generative_ai` SDK vào `AiAssistantPage`.<br>- Xây dựng System Prompt chuyên sâu về sinh tồn, thời tiết dã ngoại. | `lib/features/ai_assistant/` |
-| **Tuần 8** | Integration & Code Review | - Hợp nhất (Merge) các nhánh của Member 2 (Model AI) và Member 3 (UI Maps).<br>- Giải quyết xung đột mã nguồn (merge conflicts) trên nhánh `develop`. | Toàn bộ dự án |
-| **Tuần 9** | Unit & Widget Testing | - Viết Unit Test cho tất cả BLoC (First Aid, Navigation, Auth).<br>- Đạt độ bao phủ kiểm thử (Test Coverage) tối thiểu 70%. | `test/` |
-| **Tuần 10** | Battery & Memory Profiling | - Dùng Flutter DevTools phân tích rò rỉ bộ nhớ (Memory Leaks).<br>- Tối ưu FPS màn hình bản đồ không bị giật lag khi có hàng nghìn điểm GPS. | Profiling reports |
-| **Tuần 11** | End-to-End Field Test | - Test thực tế ứng dụng trong điều kiện ngoại tuyến hoàn toàn (Airplane Mode).<br>- Kiểm tra tính chính xác của GPS và tính năng đọc giọng nói SOS. | Release Test Matrix |
-| **Tuần 12** | Release Build & Fastlane | - Đóng gói APK Release / App Bundle có chữ ký số (Keystore).<br>- Hoàn thiện tài liệu kiến trúc kỹ thuật (Software Architecture Document). | `fastlane/`<br>`docs/` |
-| **Tuần 13** | Capstone Defense | - Chuẩn bị Slide thuyết trình bảo vệ trước Hội đồng VKU.<br>- Quay video Demo các kịch bản thực tế (Mất sóng, ngã chấn thương, cần cứu hộ). | Presentation & Demo |
+| **Tuần 1** | ✅ Khởi tạo Nền tảng | - Dựng khung Clean Architecture 3 lớp chuẩn.<br>- Cấu hình Drift SQLite 4 bảng, BLoC, GoRouter 5 tab, Dark Theme.<br>- Viết test mồi, cấu hình CI/CD và đẩy mã nguồn lên GitHub. | `lib/core/`<br>`lib/features/`<br>`pubspec.yaml` |
+| **Tuần 2** | Code Gen & TFLite Tokenizer | - Chạy `build_runner` sinh mã Drift DB & Injectable DI.<br>- Viết `TfliteTokenizer` bằng ngôn ngữ Dart để tiền xử lý văn bản tiếng Việt/Anh (tách từ, padding sequence) tương thích với mô hình AI của Member 2. | `lib/core/di/`<br>`lib/core/database/`<br>`lib/features/first_aid/data/datasources/tflite_tokenizer.dart` |
+| **Tuần 3** | TFLite On-Device Inference Engine | - Nhận model `.tflite` từ Member 2, nạp qua `tflite_flutter`.<br>- Tự tay viết code xử lý Input/Output Tensors, ánh xạ xác suất chẩn đoán ra cẩm nang sơ cứu trong `FirstAidBlocHandler`.<br>- Kết nối Micro (Speech-to-Text) và Loa (Text-to-Speech) hoạt động ngoại tuyến. | `lib/features/first_aid/data/datasources/first_aid_ai_service.dart`<br>`lib/features/first_aid/presentation/bloc/` |
+| **Tuần 4** | Offline Map Tile Storage Engine | - Xây dựng cơ chế tải và lưu đệm gạch bản đồ OpenStreetMap theo Bounding Box địa lý (`flutter_map_cache`).<br>- Quản lý lưu trữ SQLite/file gạch bản đồ trong bộ nhớ máy, xử lý tự động xoá cache cũ nếu vượt quá 500MB. | `lib/features/navigation/data/datasources/tile_cache_manager.dart` |
+| **Tuần 5** | Background GPS Engine & Pin | - Tối ưu Foreground Service chạy ngầm định vị liên tục khi tắt màn hình bằng `flutter_foreground_task`.<br>- Xử lý Wakelock và thuật toán lọc nhiễu toạ độ GPS (Kalman/Distance filter) để tiết kiệm pin tối đa cho chuyến đi dài ngày. | `lib/features/navigation/data/datasources/gps_service.dart` |
+| **Tuần 6** | Hardware SOS & Auto Cloud Sync | - Viết bộ điều khiển phần cứng: Kích hoạt đèn Flash camera chớp mã Morse SOS (`... --- ...`) và còi hú cứu nạn âm lượng cực đại qua loa ngoài.<br>- Kiểm thử `SyncService` tự động đồng bộ toạ độ lên Supabase khi phát hiện sóng 4G. | `lib/features/sos/`<br>`lib/core/network/sync_service.dart` |
+| **Tuần 7** | Đóng gói APK Release & Tổng duyệt | - Đóng gói APK Release signed có chữ ký số (Keystore) qua Fastlane.<br>- Chạy nghiệm thu toàn bộ tính năng trong chế độ máy bay (100% Airplane Mode).<br>- Hoàn thiện Software Architecture Document và cùng nhóm chuẩn bị Slide bảo vệ. | `fastlane/`<br>`build/app/outputs/flutter-apk/` |
 
 ---
 
 ### 🧠 MEMBER 2: AI ON-DEVICE & BACKEND SPECIALIST
-> **Trách nhiệm chính:** Thu thập và làm sạch Dataset sơ cứu, Huấn luyện mô hình Intent NLP, Tối ưu & Lượng tử hóa TFLite, Quản trị Cloud Backend Supabase.
+> **Trách nhiệm chính:** Thu thập và chuẩn hoá Dataset sơ cứu, Huấn luyện mô hình Intent NLP, Lượng tử hóa TFLite INT8, Thiết lập Cloud Supabase PostGIS, API thời tiết & độ cao.
 
 | Tuần | Giai đoạn | Chi tiết công việc cụ thể | File/Mô-đun phụ trách |
 | :---: | :--- | :--- | :--- |
-| **Tuần 2** | Thu thập dữ liệu Sơ cứu | - Thu thập 200+ mẫu câu miêu tả triệu chứng trekking (tiếng Việt & tiếng Anh): hạ thân nhiệt, say độ cao, rắn cắn, côn trùng độc, sốc nhiệt, trật khớp...<br>- Gán nhãn Intent và Entity theo chuẩn định dạng JSON. | `assets/data/first_aid_dataset.json`<br>`docs/ai_pipeline/` |
-| **Tuần 3** | Huấn luyện mô hình NLP | - Chạy file `pipeline_guide.py` huấn luyện mô hình phân loại intent.<br>- Thử nghiệm với các kiến trúc: MobileBERT, DistilBERT hoặc Bi-LSTM/TextCNN.<br>- Đạt độ chính xác Accuracy ≥ 85% trên tập kiểm thử (Test Set). | `docs/ai_pipeline/train_model.py` |
-| **Tuần 4** | Lượng tử hoá INT8 & Export | - Chuyển đổi mô hình PyTorch/TensorFlow sang TensorFlow Lite (`.tflite`).<br>- Áp dụng kỹ thuật INT8 Quantization để dung lượng file đạt < 25MB.<br>- Xuất file nhãn phân loại (`labels.txt`) và từ điển Tokenizer (`vocab.txt`). | `assets/models/first_aid_model.tflite`<br>`assets/models/labels.txt` |
-| **Tuần 5** | Triển khai Supabase PostGIS | - Đăng ký tài khoản Supabase Cloud.<br>- Chạy file `docs/supabase/schema.sql` tạo các bảng và kích hoạt extension `postgis`.<br>- Thiết lập chính sách bảo mật dữ liệu Row Level Security (RLS). | Supabase Dashboard<br>`docs/supabase/` |
-| **Tuần 6** | Open-Elevation & Weather API | - Nghiên cứu và viết hàm lấy dữ liệu độ cao từ Open-Elevation API / OpenTopography.<br>- Tích hợp OpenWeatherMap API lấy dữ liệu thời tiết dự báo trước chuyến đi. | Backend / Service layer |
-| **Tuần 7** | Voice STT & TTS Optimization | - Thử nghiệm mô hình Vosk offline hoặc tinh chỉnh cấu hình `speech_to_text` tiếng Việt.<br>- Cấu hình giọng đọc tiếng Việt mượt mà cho `flutter_tts`. | AI Audio Pipeline |
-| **Tuần 8** | Chuyển giao Model cho Mobile | - Bàn giao file model `.tflite` và cấu trúc Input/Output Tensors cho Member 1 nạp vào Flutter.<br>- Hỗ trợ Member 1 gỡ lỗi Tensor Mismatch (nếu có). | `assets/models/` |
-| **Tuần 9** | Mở rộng Seed Data | - Mở rộng cẩm nang từ 4 bệnh lên 15+ bệnh lý dã ngoại chuyên sâu.<br>- Viết quy trình sơ cứu chi tiết theo chuẩn Hội Chữ Thập Đỏ quốc tế. | `assets/data/first_aid_guides.json` |
-| **Tuần 10** | Đo lường hiệu năng AI | - Đo đạc thời gian suy luận (Inference Latency) trên thiết bị Android thật (yêu cầu < 150ms).<br>- Đánh giá mức độ hao pin khi chạy suy luận liên tục. | AI Benchmark Report |
-| **Tuần 11** | Backend Security & Stress Test | - Kiểm tra bảo mật API keys.<br>- Kiểm tra khả năng chịu tải của database Supabase khi nhận hàng loạt toạ độ GPS gửi lên. | Security Audit |
-| **Tuần 12** | Báo cáo chuyên đề AI | - Viết chương báo cáo: "Kiến trúc mô hình On-Device AI và kỹ thuật lượng tử hoá".<br>- Lập biểu đồ so sánh độ chính xác và dung lượng giữa mô hình gốc và bản quantize. | Báo cáo Capstone |
-| **Tuần 13** | Hỗ trợ Bảo vệ Capstone | - Phụ trách trả lời các câu hỏi của Hội đồng về khía cạnh AI, mô hình học máy và cơ sở dữ liệu. | Buổi bảo vệ |
+| **Tuần 1** | Chuẩn bị dữ liệu sơ cứu | - Thu thập & gán nhãn 150+ mẫu câu miêu tả triệu chứng dã ngoại (tiếng Việt & Anh): hạ thân nhiệt, say độ cao, rắn cắn, sốc nhiệt, trật khớp... | `assets/data/first_aid_dataset.json` |
+| **Tuần 2** | Huấn luyện mô hình NLP & Export | - Chạy pipeline `pipeline_guide.py` huấn luyện mô hình phân loại intent triệu chứng (Accuracy ≥ 85%).<br>- Lượng tử hóa mô hình sang INT8 `.tflite` (< 20MB) và xuất file `labels.txt`, `vocab.txt` bàn giao cho Member 1. | `docs/ai_pipeline/`<br>`assets/models/` |
+| **Tuần 3** | Triển khai Supabase PostGIS | - Khởi tạo project Supabase Cloud, chạy `docs/supabase/schema.sql` kích hoạt extension `postgis`.<br>- Cấu hình Row Level Security (RLS) và viết truy vấn không gian toạ độ mẫu. | Supabase Dashboard<br>`docs/supabase/` |
+| **Tuần 4** | Độ cao & Mở rộng Cẩm nang | - Tích hợp Open-Elevation API / OpenTopography lấy dữ liệu độ cao bổ trợ cho bản đồ.<br>- Mở rộng cẩm nang từ 4 bệnh lên 15+ quy trình sơ cứu y khoa dã ngoại chuyên sâu. | `assets/data/first_aid_guides.json`<br>API Services |
+| **Tuần 5** | Đo lường hiệu năng AI & Giọng nói | - Đo đạc độ trễ suy luận AI trên máy Android thật (yêu cầu Latency < 150ms).<br>- Tinh chỉnh cấu hình âm sắc tiếng Việt mượt mà cho `flutter_tts` và `speech_to_text`. | AI Benchmark Report |
+| **Tuần 6** | Stress Test Backend & Báo cáo AI | - Kiểm tra tải Supabase khi nhận đồng loạt 1000+ điểm GPS.<br>- Viết chương báo cáo chuyên sâu: "Kiến trúc mô hình On-Device AI và kỹ thuật lượng tử hoá". | Báo cáo Capstone |
+| **Tuần 7** | Phản biện AI & Hỗ trợ Hội đồng | - Chuẩn bị bảng số liệu so sánh mô hình gốc vs bản nén INT8 (dung lượng, tốc độ, độ chính xác) để phản biện trước Hội đồng. | Buổi bảo vệ |
 
 ---
 
 ### 🎨 MEMBER 3: UI/UX & OFFLINE MAPS SPECIALIST
-> **Trách nhiệm chính:** Thiết kế giao diện Figma chuẩn ngoài trời, Tối ưu bản đồ flutter_map, Vẽ đồ thị trắc diện độ cao fl_chart, Trải nghiệm người dùng dã ngoại.
+> **Trách nhiệm chính:** Thiết kế hệ thống Figma chuẩn ngoài trời, Tối ưu giao diện bản đồ flutter_map, Vẽ biểu đồ trắc diện độ cao fl_chart, Thiết kế Slide & Poster.
 
 | Tuần | Giai đoạn | Chi tiết công việc cụ thể | File/Mô-đun phụ trách |
 | :---: | :--- | :--- | :--- |
-| **Tuần 2** | Thiết kế Wireframe & Figma | - Thiết kế hoàn chỉnh Prototype trên Figma cho 5 màn hình chính.<br>- Tuân thủ Material 3 High Contrast, kích thước nút bấm lớn (tối thiểu 48x48dp) để dễ bấm khi đeo găng tay trekking. | Figma Project Link |
-| **Tuần 3** | Tối ưu Giao diện Navigation | - Cải thiện `navigation_page.dart`: Thiết kế thanh công cụ điều khiển bản đồ, nút căn giữa toạ độ (Center GPS), chọn loại bản đồ (Vệ tinh, Địa hình, Tiêu chuẩn). | `lib/features/navigation/presentation/pages/navigation_page.dart` |
-| **Tuần 4** | Thiết kế La Bàn (Compass) | - Tích hợp la bàn số động (Digital Compass HUD) xoay theo hướng di chuyển người dùng dựa vào cảm biến từ kế của điện thoại (`flutter_compass`). | `lib/features/navigation/presentation/widgets/compass_widget.dart` |
-| **Tuần 5** | Quản lý Waypoint trên bản đồ | - Xây dựng Dialog tạo Waypoint: Nhập tên điểm mốc, chọn icon (Nguồn nước 💧, Cắm trại ⛺, Nguy hiểm ⚠️), chụp ảnh đính kèm toạ độ. | `lib/features/navigation/presentation/widgets/waypoint_dialog.dart` |
-| **Tuần 6** | Vẽ biểu đồ Độ cao (Altitude Chart) | - Nâng cấp `trail_page.dart`: Dùng `fl_chart` hiển thị đường cong trắc diện độ cao theo quãng đường.<br>- Hiển thị điểm cao nhất (Max Peak), điểm thấp nhất, độ dốc trung bình. | `lib/features/trail/presentation/pages/trail_page.dart` |
-| **Tuần 7** | Giao diện Tải Bản đồ Offline | - Thiết kế màn hình "Quản lý bản đồ ngoại tuyến": Cho phép người dùng chọn vùng địa lý (bounding box) và bấm tải gạch bản đồ.<br>- Hiển thị thanh tiến trình tải (Progress Bar) và dung lượng file đã tải. | `lib/features/navigation/presentation/pages/offline_map_manager_page.dart` |
-| **Tuần 8** | Giao diện Chi tiết Sơ cứu | - Thiết kế hoạt ảnh (Animations) cho từng bước sơ cứu trong `first_aid_detail_page.dart`.<br>- Thêm bộ đếm thời gian hồi sức tim phổi CPR (Metronome âm thanh 100-120 nhịp/phút). | `lib/features/first_aid/presentation/pages/first_aid_detail_page.dart` |
-| **Tuần 9** | Đánh bóng UI & Dark Mode | - Tinh chỉnh chế độ nền tối siêu tiết kiệm pin (True Black OLED theme).<br>- Thêm hiệu ứng Shimmer Loading skeleton cho các danh sách tải dữ liệu. | `lib/core/theme/` |
-| **Tuần 10** | Trải nghiệm SOS khẩn cấp | - Thiết kế màn hình SOS trực quan: Bấm giữ 3 giây để kích hoạt đèn Flash phát mã Morse cứu hộ (SOS `... --- ...`) và còi hú báo động âm lượng lớn. | `lib/core/pages/home_page.dart`<br>`lib/features/sos/` |
-| **Tuần 11** | Kiểm thử Khả năng tương thích | - Kiểm tra hiển thị trên nhiều kích cỡ màn hình khác nhau (Android cỡ nhỏ, màn hình tràn viền, máy tính bảng).<br>- Tối ưu phông chữ hiển thị rõ ràng dưới ánh sáng mặt trời gay gắt. | UI Responsiveness Report |
-| **Tuần 12** | Thiết kế Poster & Tài liệu | - Thiết kế Poster giới thiệu đồ án Capstone chuẩn nhận diện VKU.<br>- Chuẩn bị ảnh chụp màn hình đẹp mắt (Mockups) cho tài liệu báo cáo. | Poster & Slide Assets |
-| **Tuần 13** | Hỗ trợ Demo Sản phẩm | - Phụ trách điều khiển ứng dụng trực tiếp (Live Demo) mượt mà trong quá trình nhóm bảo vệ trước Hội đồng. | Buổi bảo vệ |
+| **Tuần 1** | Wireframe & Figma Prototype | - Thiết kế hoàn chỉnh Prototype trên Figma cho 5 màn hình chính theo chuẩn Material 3 High Contrast, nút bấm lớn tối thiểu 48x48dp. | Figma Project Link |
+| **Tuần 2** | Tối ưu Giao diện Bản đồ & La bàn | - Cải thiện `navigation_page.dart`: Nút căn giữa toạ độ GPS, thanh công cụ chọn lớp bản đồ.<br>- Tích hợp Widget la bàn số xoay theo góc cảm biến máy (`compass_widget.dart`). | `lib/features/navigation/presentation/pages/navigation_page.dart`<br>`lib/features/navigation/presentation/widgets/` |
+| **Tuần 3** | Quản lý Mốc Waypoint trên bản đồ | - Xây dựng Popup tạo Waypoint: Nhập tên điểm, chọn icon (💧 Nguồn nước, ⛺ Cắm trại, ⚠️ Nguy hiểm) và chụp ảnh đính kèm toạ độ.<br>- Tuỳ biến Marker hiển thị sinh động trên bản đồ. | `lib/features/navigation/presentation/widgets/waypoint_dialog.dart` |
+| **Tuần 4** | Vẽ biểu đồ Độ cao (Altitude Profile) | - Nâng cấp `trail_page.dart` bằng thư viện `fl_chart`: Vẽ đường cong độ cao theo chiều dài cung đường.<br>- Hiển thị thẻ tóm tắt: Độ cao cực đại (Max Elevation), dốc trung bình, tổng leo dốc (Elevation Gain). | `lib/features/trail/presentation/pages/trail_page.dart` |
+| **Tuần 5** | Màn hình SOS & Animation Sơ cứu | - Thiết kế giao diện SOS với nút bấm giữ 3 giây có vòng tròn đếm ngược đập nhịp.<br>- Thêm hình ảnh/hoạt ảnh minh hoạ từng bước xử lý vết thương trong `first_aid_detail_page.dart`. | `lib/features/first_aid/presentation/pages/first_aid_detail_page.dart` |
+| **Tuần 6** | Đánh bóng Giao diện & Poster VKU | - Tinh chỉnh Dark Mode chuẩn OLED, thêm Shimmer loading skeleton.<br>- Thiết kế Slide thuyết trình chuyên nghiệp và Poster A0 chuẩn nhận diện VKU. | Poster & Slide Assets |
+| **Tuần 7** | Trình chiếu & Demo Sản phẩm | - Phụ trách cầm máy thật thao tác trực tiếp kịch bản Demo mượt mà trong buổi thuyết trình trước Hội đồng. | Buổi bảo vệ |
 
 ---
 

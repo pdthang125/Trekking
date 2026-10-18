@@ -1,93 +1,110 @@
-## 📋 Danh sách việc Member 2 (AI & Backend)
+# 📋 DANH SÁCH CÔNG VIỆC CHI TIẾT 3 THÀNH VIÊN (SPRINT 7 TUẦN)
 
-### Tuần 1–2 — Setup & Research
-- [ ] Clone repo: `git clone https://github.com/pdthang125/Trekking.git`
-- [ ] Cài Python: `pip install torch transformers datasets scikit-learn tensorflow`
-- [ ] Đọc: `docs/ai_pipeline/pipeline_guide.py`
-- [ ] Thu thập dataset (target 200+ samples/loại):
-  - [ ] Rắn cắn (snake bite)
-  - [ ] Trẹo khớp (sprain)
-  - [ ] Kiệt sức nhiệt (heat exhaustion)  
-  - [ ] Hạ thân nhiệt (hypothermia)
-  - [ ] Gãy xương (fracture)
-  - [ ] Bỏng (burn)
-  - [ ] Sốt cao (high fever)
-  - [ ] Dị ứng / sốc phản vệ (anaphylaxis)
-- [ ] Tạo CSV dataset theo format: `symptom_text,condition_id,severity`
-
-### Tuần 3–4 — Model Training
-- [ ] Fine-tune MobileBERT trên Google Colab (free GPU)
-- [ ] Đánh giá: accuracy ≥ 80%, F1-score ≥ 0.75
-- [ ] Export → INT8 quantize → `.tflite`
-- [ ] Copy model vào: `assets/models/first_aid_model.tflite`
-- [ ] Implement `TfliteInferenceDatasource` trong `lib/features/first_aid/data/datasources/`
-- [ ] Thay thế `searchBySymptoms()` bằng TFLite inference
-
-### Tuần 5–6 — FastAPI Backend
-- [ ] Tạo `backend/` folder tại root project
-- [ ] Implement FastAPI endpoints:
-  - `POST /predict` — online AI fallback
-  - `GET /guides` — sync guides
-  - `GET /health` — health check
-- [ ] Deploy: Railway.app hoặc Render.com (free tier)
-
-### Branch convention
-```bash
-git checkout develop
-git checkout -b feature/tflite-model
-# code...
-git commit -m "feat(ai): add TFLite inference datasource"
-git push origin feature/tflite-model
-# Tạo PR → develop
-```
+> **Dự án:** TrekGuard AI — Capstone Project VKU  
+> **Repository:** https://github.com/pdthang125/Trekking  
+> **Thời gian:** 7 Tuần tăng tốc
 
 ---
 
-## 📋 Danh sách việc Member 3 (UI/UX & Maps)
+## 👑 Danh sách việc Member 1 (Leader / Mobile Engine Architect)
 
-### Tuần 1–2 — Design & Setup
+### Tuần 1 — Kiến trúc & Nền tảng (✅ ĐÃ HOÀN THÀNH)
+- [x] Khởi tạo Clean Architecture 3 lớp chuẩn Flutter
+- [x] Cấu hình Drift SQLite 4 bảng (`FirstAidGuides`, `TrackPoints`, `OfflineWaypoints`, `SyncQueue`)
+- [x] Cấu hình BLoC State Management & GoRouter 5 tab
+- [x] Cấu hình Android Permissions (Foreground Service, GPS, Mic, Wakelock)
+- [x] Đẩy mã nguồn lên GitHub (`main` & `develop`)
+
+### Tuần 2 — Code Generation & Dart Tokenizer
+- [ ] Chạy `dart run build_runner build --delete-conflicting-outputs` sinh Drift DB & DI
+- [ ] Viết `TfliteTokenizer` bằng Dart thuần để tách từ, padding câu tiếng Việt cho model AI
+- [ ] Thiết lập biến môi trường `.env` kết nối Supabase Cloud
+
+### Tuần 3 — TFLite On-Device Engine & Audio
+- [ ] Nhận model `.tflite` từ Member 2, cấu hình `tflite_flutter`
+- [ ] Viết bộ nạp Tensor, chạy suy luận Offline và map kết quả vào `FirstAidBlocHandler`
+- [ ] Tích hợp Micro (Speech-to-Text) và Loa (Text-to-Speech đọc to hướng dẫn sơ cứu)
+
+### Tuần 4 — Offline Map Tile Caching Engine
+- [ ] Viết module tải và lưu cache gạch bản đồ OpenStreetMap vào bộ nhớ trong
+- [ ] Xử lý tải gạch theo Bounding Box địa lý và xoá cache cũ khi vượt 500MB
+
+### Tuần 5 — Background GPS & Thuật toán lọc nhiễu
+- [ ] Cấu hình Foreground Service định vị liên tục khi tắt màn hình
+- [ ] Viết bộ lọc nhiễu GPS (Kalman/Distance filter) giảm trôi toạ độ và tiết kiệm pin
+
+### Tuần 6 — Hardware SOS & Auto Sync
+- [ ] Điều khiển đèn Flash nháy mã Morse SOS (`... --- ...`) và còi hú cứu nạn
+- [ ] Kiểm thử `SyncService` tự động đồng bộ toạ độ lên Supabase khi phát hiện sóng 4G
+
+### Tuần 7 — Release & Tổng duyệt
+- [ ] Đóng gói Release APK signed qua Fastlane
+- [ ] Nghiệm thu toàn bộ tính năng trong chế độ máy bay (100% Airplane Mode)
+- [ ] Hoàn thiện báo cáo kỹ thuật và chủ trì buổi thuyết trình bảo vệ Capstone
+
+---
+
+## 🧠 Danh sách việc Member 2 (AI & Backend Specialist)
+
+### Tuần 1–2 — Dataset & Model Training
 - [ ] Clone repo: `git clone https://github.com/pdthang125/Trekking.git`
-- [ ] Cài Flutter: copy từ `C:\flutter` hoặc tải mới
-- [ ] `flutter pub get` trong thư mục project
-- [ ] Tạo Figma project — design system từ `app_theme.dart`:
-  ```
-  Primary:  #2ECC71
-  Danger:   #E74C3C  
-  Warning:  #F39C12
-  Info:     #3498DB
-  Dark bg:  #0F1320
-  Card:     #242A38
-  Font:     Outfit (Google Fonts)
-  ```
-- [ ] Wireframe 5 màn hình (xem code hiện tại làm tham chiếu)
-- [ ] Share Figma link → paste vào README.md
+- [ ] Cài Python: `pip install torch transformers datasets scikit-learn tensorflow`
+- [ ] Thu thập 150+ mẫu triệu chứng dã ngoại (tiếng Việt & Anh) vào `assets/data/first_aid_dataset.json`
+- [ ] Chạy `docs/ai_pipeline/pipeline_guide.py` huấn luyện mô hình phân loại Intent (Accuracy ≥ 85%)
+- [ ] Lượng tử hóa sang INT8 `.tflite` (< 20MB)
+- [ ] Bàn giao `first_aid_model.tflite`, `labels.txt`, `vocab.txt` cho Member 1
 
-### Tuần 3–4 — Maps & GPS UI
-- [ ] Offline tile caching: nghiên cứu `flutter_map` + MBTiles
-- [ ] Implement real GPS tracking trong `navigation_page.dart`
-  - Kết nối `NavigationBloc` với `StartTrackingUseCase`
-  - Hiển thị polyline track real-time
-- [ ] Waypoint dialog (add/edit/delete)
-- [ ] Compass overlay trên map
-- [ ] Download map tiles UI (progress indicator)
+### Tuần 3–4 — Supabase PostGIS & Elevation API
+- [ ] Khởi tạo Supabase Cloud, chạy `docs/supabase/schema.sql` bật PostGIS
+- [ ] Cấu hình Row Level Security (RLS) bảo mật dữ liệu cá nhân
+- [ ] Viết hàm gọi Open-Elevation API / OpenTopography lấy độ cao địa hình
+- [ ] Mở rộng cẩm nang từ 4 lên 15+ bệnh lý sơ cứu chuyên sâu
 
-### Tuần 5–6 — Trail & Altitude
-- [ ] Kết nối `trail_page.dart` với real GPS data từ Drift
-- [ ] Open-Elevation API call để lấy elevation data
-- [ ] Distance calculation display (Haversine formula)
-- [ ] Trip summary card
+### Tuần 5–6 — Benchmark AI & Báo cáo
+- [ ] Đo đạc độ trễ suy luận AI trên máy Android thật (Latency < 150ms)
+- [ ] Tinh chỉnh cấu hình nhận diện giọng nói tiếng Việt
+- [ ] Stress test database Supabase khi nhận hàng loạt toạ độ GPS
+- [ ] Viết chương báo cáo: *"Kiến trúc mô hình On-Device AI và kỹ thuật lượng tử hoá"*
 
-### Tuần 7 — Polish
-- [ ] Dark Mode kiểm tra trên tất cả màn hình
-- [ ] Loading skeletons (shimmer) cho danh sách
-- [ ] Error states UI
-- [ ] Onboarding screens (nếu có thời gian)
+### Tuần 7 — Phản biện Hội đồng
+- [ ] Chuẩn bị bảng số liệu so sánh mô hình gốc vs bản quantize INT8 để phản biện
 
-### Branch convention
+---
+
+## 🎨 Danh sách việc Member 3 (UI/UX & Offline Maps)
+
+### Tuần 1–2 — Figma & Navigation UI
+- [ ] Clone repo: `git clone https://github.com/pdthang125/Trekking.git`
+- [ ] Tạo Figma project — design system chuẩn Material 3 High Contrast (nút tối thiểu 48x48dp)
+- [ ] Wireframe 5 màn hình chính, share link Figma vào `README.md`
+- [ ] Cải thiện `navigation_page.dart`: Nút căn giữa GPS, chọn lớp bản đồ
+- [ ] Tích hợp Widget la bàn số xoay theo cảm biến máy (`compass_widget.dart`)
+
+### Tuần 3–4 — Waypoint & Altitude Chart
+- [ ] Popup tạo Waypoint: Nhập tên, chọn icon (💧 Nguồn nước, ⛺ Cắm trại, ⚠️ Nguy hiểm) kèm chụp ảnh
+- [ ] Tuỳ biến hiển thị Marker sinh động trên bản đồ
+- [ ] Dùng `fl_chart` vẽ biểu đồ trắc diện độ cao trong `trail_page.dart`
+- [ ] Hiển thị thẻ tóm tắt: Độ cao cực đại (Max Peak), độ dốc trung bình, tổng leo dốc
+
+### Tuần 5–6 — Màn hình SOS & Poster VKU
+- [ ] Giao diện SOS khẩn cấp: Giữ nút 3 giây có vòng tròn đếm ngược
+- [ ] Hoạt ảnh (Animations) minh hoạ từng bước xử lý vết thương trong `first_aid_detail_page.dart`
+- [ ] Tinh chỉnh giao diện Dark Mode chuẩn OLED, thêm Shimmer loading skeleton
+- [ ] Thiết kế Slide thuyết trình chuyên nghiệp và Poster A0 chuẩn nhận diện VKU
+
+### Tuần 7 — Trình chiếu & Demo Sản phẩm
+- [ ] Nạp bản APK Release vào điện thoại thật
+- [ ] Cầm máy điều khiển thao tác trực tiếp kịch bản Demo mượt mà trong buổi bảo vệ
+
+---
+
+## 🌿 Quy tắc làm việc trên Git
 ```bash
 git checkout develop
-git checkout -b feature/offline-maps
-# design...
-git commit -m "feat(maps): implement offline tile caching"
-git push origin feature/offline-maps
+git pull origin develop
+git checkout -b feature/ten-tinh-nang
+# Làm việc & commit theo chuẩn:
+git commit -m "feat(module): nội dung tính năng"
+git push origin feature/ten-tinh-nang
+# Tạo Pull Request vào nhánh develop để Leader review
 ```
