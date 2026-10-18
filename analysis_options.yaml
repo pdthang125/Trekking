@@ -1,0 +1,26 @@
+include: package:very_good_analysis/analysis_options.yaml
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "**/*.config.dart"
+    - "lib/core/database/app_database.g.dart"
+  errors:
+    missing_required_param: error
+    missing_return: error
+    todo: ignore
+
+linter:
+  rules:
+    # ── Recommended overrides ───────────────────────────────
+    avoid_print: true
+    prefer_const_constructors: true
+    prefer_const_declarations: true
+    prefer_final_locals: true
+    use_super_parameters: true
+    avoid_unnecessary_containers: true
+    sized_box_for_whitespace: true
+    avoid_redundant_argument_values: false
+    # ── Allow TODO during development ────────────────────────
+    # comment_references: false

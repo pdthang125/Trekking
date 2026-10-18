@@ -1,0 +1,85 @@
+default_platform(:android)
+
+# ──────────────────────────────────────────────────────────────
+# Fastlane Configuration for TrekGuard AI
+# Runs: Lint → Test → Build APK → Sign → Distribute
+# ──────────────────────────────────────────────────────────────
+
+APP_NAME = "TrekGuard AI"
+PACKAGE_NAME = "com.vku.trekguard"
+
+# ─── Android Lanes ────────────────────────────────────────────
+
+platform :android do
+
+  desc "Run Flutter analysis and lint"
+  lane :lint do
+    sh("flutter analyze")
+    sh("flutter format --set-exit-if-changed lib/")
+  end
+
+  desc "Run all unit tests"
+  lane :test do
+    sh("flutter test --coverage")
+  end
+
+  desc "Build debug APK for internal testing"
+  lane :build_debug do
+    sh("flutter build apk --debug")
+  end
+
+  desc "Build release APK + Sign with keystore"
+  lane :build_release do
+    sh("flutter build apk --release " \
+       "--dart-define=SUPABASE_URL=#{ENV['SUPABASE_URL']} " \
+       "--dart-define=SUPABASE_ANON_KEY=#{ENV['SUPABASE_ANON_KEY']} " \
+       "--dart-define=GEMINI_API_KEY=#{ENV['GEMINI_API_KEY']}")
+  end
+
+  desc "Build App Bundle (AAB) for Play Store"
+  lane :build_aab do
+    sh("flutter build appbundle --release " \
+       "--dart-define=SUPABASE_URL=#{ENV['SUPABASE_URL']} " \
+       "--dart-define=SUPABASE_ANON_KEY=#{ENV['SUPABASE_ANON_KEY']} " \
+       "--dart-define=GEMINI_API_KEY=#{ENV['GEMINI_API_KEY']}")
+  end
+
+  desc "Full CI pipeline: lint → test → build release APK"
+  lane :ci do
+    lint
+    test
+    build_release
+    UI.success("✅ CI Pipeline completed for #{APP_NAME}")
+  end
+
+  desc "Upload to Firebase App Distribution (internal testers)"
+  lane :distribute do
+    build_release
+    # firebase_app_distribution(
+    #   app: ENV['FIREBASE_APP_ID'],
+    #   groups: "internal-testers",
+    #   release_notes: "TrekGuard AI — Build #{Time.now.strftime('%Y%m%d-%H%M')}",
+    # )
+    UI.message("⚠️  Configure firebase_app_distribution for auto-distribution")
+  end
+
+end
+
+# ─── iOS Lanes (Future) ───────────────────────────────────────
+
+platform :ios do
+  desc "iOS CI pipeline (requires Apple Developer account)"
+  lane :ci do
+    UI.message("iOS CI — configure signing certificates first")
+    # match(type: "appstore")
+    # sh("flutter build ios --release --no-codesign")
+    # gym(...)
+  end
+end
+
+# ─── Shared ───────────────────────────────────────────────────
+
+desc "Print version info"
+lane :version do
+  UI.message("#{APP_NAME} — Package: #{PACKAGE_NAME}")
+end
