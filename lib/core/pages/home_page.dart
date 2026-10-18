@@ -151,6 +151,18 @@ class HomeDashboardPage extends StatelessWidget {
           SliverAppBar(
             expandedHeight: 160,
             pinned: true,
+            actions: [
+              IconButton(
+                icon: const Icon(Icons.download_for_offline_rounded, color: Colors.white70),
+                tooltip: 'Bản đồ ngoại tuyến',
+                onPressed: () => context.push(AppRoutes.offlineMaps),
+              ),
+              IconButton(
+                icon: const Icon(Icons.emergency_rounded, color: AppTheme.dangerColor),
+                tooltip: 'Cứu nạn SOS',
+                onPressed: () => context.push(AppRoutes.sos),
+              ),
+            ],
             flexibleSpace: FlexibleSpaceBar(
               title: const Text(
                 'TrekGuard AI',
@@ -172,6 +184,52 @@ class HomeDashboardPage extends StatelessWidget {
                     Icons.terrain_rounded,
                     size: 60,
                     color: Colors.white24,
+                  ),
+                ),
+              ),
+            ),
+          ),
+
+          // ── SOS Quick Emergency Banner ──────────────────────
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
+              child: InkWell(
+                borderRadius: BorderRadius.circular(16),
+                onTap: () => context.push(AppRoutes.sos),
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                  decoration: BoxDecoration(
+                    color: AppTheme.dangerColor.withAlpha(30),
+                    borderRadius: BorderRadius.circular(16),
+                    border: Border.all(color: AppTheme.dangerColor.withAlpha(100)),
+                  ),
+                  child: const Row(
+                    children: [
+                      Icon(Icons.emergency_rounded, color: AppTheme.dangerColor, size: 28),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'TRUNG TÂM CỨU NẠN SOS',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w800,
+                                fontSize: 13,
+                                letterSpacing: 0.5,
+                              ),
+                            ),
+                            Text(
+                              'Toạ độ GPS ngoại tuyến, chớp đèn Flash mã Morse, còi hú',
+                              style: TextStyle(color: Colors.white70, fontSize: 11),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Icon(Icons.arrow_forward_ios_rounded, color: AppTheme.dangerColor, size: 14),
+                    ],
                   ),
                 ),
               ),

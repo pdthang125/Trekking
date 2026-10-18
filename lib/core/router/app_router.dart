@@ -3,6 +3,8 @@ import 'package:go_router/go_router.dart';
 
 import '../../features/first_aid/presentation/pages/first_aid_page.dart';
 import '../../features/navigation/presentation/pages/navigation_page.dart';
+import '../../features/navigation/presentation/pages/offline_map_manager_page.dart';
+import '../../features/sos/presentation/pages/sos_page.dart';
 import '../../features/trail/presentation/pages/trail_page.dart';
 import '../../features/ai_assistant/presentation/pages/ai_assistant_page.dart';
 import '../pages/home_page.dart';
@@ -20,6 +22,16 @@ class AppRouter {
         path: AppRoutes.splash,
         name: 'splash',
         builder: (context, state) => const SplashPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.sos,
+        name: 'sos',
+        builder: (context, state) => const SosPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.offlineMaps,
+        name: 'offline_maps',
+        builder: (context, state) => const OfflineMapManagerPage(),
       ),
       ShellRoute(
         builder: (context, state, child) => HomeScaffold(child: child),
@@ -64,6 +76,8 @@ class AppRoutes {
   static const String navigation = '/navigation';
   static const String trail = '/trail';
   static const String aiAssistant = '/ai-assistant';
+  static const String sos = '/sos';
+  static const String offlineMaps = '/offline-maps';
 }
 
 /// Bottom navigation shell wrapper

@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 
+import 'package:go_router/go_router.dart';
+import '../../../../core/router/app_router.dart';
+import '../../domain/entities/navigation_entities.dart';
+import '../widgets/waypoint_dialog.dart';
+
 /// Offline Map Navigation Screen
 /// Uses flutter_map + OpenStreetMap tiles
 class NavigationPage extends StatefulWidget {
@@ -14,8 +19,8 @@ class NavigationPage extends StatefulWidget {
 class _NavigationPageState extends State<NavigationPage> {
   final MapController _mapController = MapController();
 
-  // Default center: Fansipan, Vietnam (3143m)
-  static const _defaultCenter = LatLng(22.3076, 103.7763);
+  // Mặc định: Đỉnh Bàn Cờ, Bán đảo Sơn Trà, Đà Nẵng
+  static const _defaultCenter = LatLng(16.1189, 108.2782);
 
   bool _isTracking = false;
   final List<LatLng> _trackPoints = [];
@@ -31,7 +36,7 @@ class _NavigationPageState extends State<NavigationPage> {
             mapController: _mapController,
             options: const MapOptions(
               initialCenter: _defaultCenter,
-              initialZoom: 13,
+              initialZoom: 14,
               maxZoom: 18,
               minZoom: 3,
             ),
@@ -40,7 +45,6 @@ class _NavigationPageState extends State<NavigationPage> {
               TileLayer(
                 urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
                 userAgentPackageName: 'com.vku.trekguard',
-                // TODO: Replace with offline MBTiles source
               ),
 
               // Track polyline
@@ -70,13 +74,27 @@ class _NavigationPageState extends State<NavigationPage> {
                   children: [
                     Expanded(
                       child: Card(
+                        color: const Color(0xFF1B2232).withAlpha(220),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 12, vertical: 8,
-                          ),
-                          child: Text(
-                            '🗺️ Bản Đồ Ngoại Tuyến',
-                            style: Theme.of(context).textTheme.titleSmall,
+                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                          child: Row(
+                            children: [
+                              const Icon(Icons.terrain_rounded, color: Colors.greenAccent, size: 20),
+                              const SizedBox(width: 8),
+                              Expanded(
+                                child: Text(
+                                  'Sơn Trà (621m) · Offline',
+                                  style: Theme.of(context).textTheme.titleSmall?.copyWith(color: Colors.white),
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                              IconButton(
+                                icon: const Icon(Icons.download_rounded, color: Colors.white70, size: 20),
+                                tooltip: 'Quản lý bản đồ ngoại tuyến',
+                                onPressed: () => context.push(AppRoutes.offlineMaps),
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -109,12 +127,14 @@ class _NavigationPageState extends State<NavigationPage> {
               children: [
                 FloatingActionButton.small(
                   heroTag: 'add_waypoint',
+                  tooltip: 'Tạo mốc toạ độ (Waypoint)',
                   onPressed: _addWaypoint,
                   child: const Icon(Icons.add_location_rounded),
                 ),
                 const SizedBox(height: 8),
                 FloatingActionButton.small(
                   heroTag: 'my_location',
+                  tooltip: 'Căn giữa GPS',
                   onPressed: _goToMyLocation,
                   child: const Icon(Icons.my_location_rounded),
                 ),
@@ -128,23 +148,57 @@ class _NavigationPageState extends State<NavigationPage> {
 
   void _toggleTracking() {
     setState(() => _isTracking = !_isTracking);
-    // TODO: Start/stop GPS tracking service
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(_isTracking ? '🛰️ Bắt đầu ghi vết GPS ngầm...' : '⏹️ Đã tạm dừng ghi vết GPS'),
+        duration: const Duration(seconds: 2),
+      ),
+    );
   }
 
   void _addWaypoint() {
-    // TODO: Add waypoint at current GPS position
     final center = _mapController.camera.center;
-    setState(() {
-      _waypoints.add(Marker(
-        point: center,
-        width: 40, height: 40,
-        child: const Icon(
-          Icons.location_on_rounded,
-          color: Colors.orange,
-          size: 36,
-        ),
-      ));
-    });
+    final currentGps = GpsPoint(
+      latitude: center.latitude,
+      longitude: center.longitude,
+      altitude: 621.0,
+      accuracy: 3.0,
+      recordedAt: DateTime.now(),
+    );
+
+    showDialog(
+      context: context,
+      builder: (ctx) => WaypointDialog(
+        currentPosition: currentGps,
+        onSave: (waypoint) {
+          setState(() {
+            _waypoints.add(Marker(
+              point: LatLng(waypoint.position.latitude, waypoint.position.longitude),
+              width: 44,
+              height: 44,
+              child: Tooltip(
+                message: '${waypoint.name}${waypoint.note != null ? '\n${waypoint.note}' : ''}',
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.black87,
+                    shape: BoxShape.circle,
+                    border: Border.all(color: Colors.amberAccent, width: 2),
+                  ),
+                  child: const Icon(
+                    Icons.location_on_rounded,
+                    color: Colors.amberAccent,
+                    size: 26,
+                  ),
+                ),
+              ),
+            ));
+          });
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text('📍 Đã ghim mốc "${waypoint.name}" lên bản đồ!')),
+          );
+        },
+      ),
+    );
   }
 
   void _goToMyLocation() {

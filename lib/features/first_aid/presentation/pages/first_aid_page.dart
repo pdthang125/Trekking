@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../domain/entities/first_aid_entities.dart';
 import '../bloc/first_aid_bloc.dart';
+import '../widgets/cpr_dialog.dart';
 import '../widgets/symptom_input_widget.dart';
 import '../widgets/guide_card_widget.dart';
 import '../widgets/severity_badge_widget.dart';
@@ -17,9 +19,12 @@ class FirstAidPage extends StatelessWidget {
         title: const Text('🏥 Sơ Cứu Khẩn Cấp'),
         actions: [
           IconButton(
-            icon: const Icon(Icons.volume_up_rounded),
-            tooltip: 'Đọc hướng dẫn',
-            onPressed: () {},
+            icon: const Icon(Icons.favorite_rounded, color: AppTheme.dangerColor),
+            tooltip: 'Hồi sức tim phổi (CPR Metronome)',
+            onPressed: () => showDialog(
+              context: context,
+              builder: (ctx) => const CprDialog(),
+            ),
           ),
         ],
       ),
