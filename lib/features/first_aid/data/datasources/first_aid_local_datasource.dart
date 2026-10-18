@@ -4,7 +4,6 @@ import 'package:injectable/injectable.dart';
 
 import '../../../../core/database/app_database.dart';
 import '../../domain/entities/first_aid_entities.dart';
-import '../models/first_aid_model.dart';
 import 'package:drift/drift.dart';
 
 abstract class FirstAidLocalDatasource {
@@ -105,19 +104,24 @@ class FirstAidLocalDatasourceImpl implements FirstAidLocalDatasource {
 
     await db.batch((batch) {
       for (final item in data) {
-        batch.insertOnConflictUpdate(db.firstAidGuides, FirstAidGuidesCompanion(
-          id: Value(item['id'] as String),
-          conditionName: Value(item['conditionName'] as String),
-          conditionNameVi: Value(item['conditionNameVi'] as String),
-          severity: Value(item['severity'] as String),
-          description: Value(item['description'] as String),
-          descriptionVi: Value(item['descriptionVi'] as String),
-          stepsJson: Value(json.encode(item['steps'])),
-          doNotsJson: Value(json.encode(item['doNots'])),
-          tagsJson: Value(json.encode(item['tags'])),
-          whenToEvacuate: Value(item['whenToEvacuate'] as String?),
-          whenToEvacuateVi: Value(item['whenToEvacuateVi'] as String?),
-        ));
+        batch.insert(
+          db.firstAidGuides,
+          FirstAidGuidesCompanion(
+            id: Value(item['id'] as String),
+            conditionName: Value(item['conditionName'] as String),
+            conditionNameVi: Value(item['conditionNameVi'] as String),
+            severity: Value(item['severity'] as String),
+            description: Value(item['description'] as String),
+            descriptionVi: Value(item['descriptionVi'] as String),
+            stepsJson: Value(json.encode(item['steps'])),
+            doNotsJson: Value(json.encode(item['doNots'])),
+            doNotsViJson: Value(json.encode(item['doNots'])),
+            tagsJson: Value(json.encode(item['tags'])),
+            whenToEvacuate: Value(item['whenToEvacuate'] as String?),
+            whenToEvacuateVi: Value(item['whenToEvacuateVi'] as String?),
+          ),
+          mode: InsertMode.insertOrReplace,
+        );
       }
     });
   }
@@ -157,4 +161,4 @@ class FirstAidLocalDatasourceImpl implements FirstAidLocalDatasource {
 }
 
 // Drift type alias for table row
-typedef FirstAidGuide$row = FirstAidGuidesData;
+typedef FirstAidGuide$row = FirstAidGuideData;

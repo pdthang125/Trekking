@@ -93,7 +93,7 @@ class AppTheme {
       colorScheme: colorScheme,
       scaffoldBackgroundColor: _darkBackground,
       textTheme: _buildTextTheme(const Color(0xFFE8EDF2)),
-      cardTheme: CardThemeData(
+      cardTheme: CardTheme(
         color: _darkCard,
         elevation: 0,
         shape: RoundedRectangleBorder(
@@ -173,7 +173,7 @@ class AppTheme {
       colorScheme: colorScheme,
       scaffoldBackgroundColor: _lightBackground,
       textTheme: _buildTextTheme(const Color(0xFF1A2332)),
-      cardTheme: CardThemeData(
+      cardTheme: CardTheme(
         color: _lightCard,
         elevation: 2,
         shadowColor: Colors.black.withAlpha(20),

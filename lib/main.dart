@@ -10,14 +10,26 @@ import 'core/env/env.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Initialize Supabase
-  await Supabase.initialize(
-    url: Env.supabaseUrl,
-    anonKey: Env.supabaseAnonKey,
-  );
+  // Initialize Supabase with offline fallback
+  try {
+    if (!Env.supabaseUrl.contains('YOUR_PROJECT')) {
+      await Supabase.initialize(
+        url: Env.supabaseUrl,
+        anonKey: Env.supabaseAnonKey,
+      );
+    } else {
+      debugPrint('ℹ️ [Offline Mode] Supabase URL chưa thiết lập. Khởi động ở chế độ 100% Ngoại tuyến.');
+    }
+  } catch (e) {
+    debugPrint('⚠️ Không thể kết nối Supabase, chuyển sang chế độ ngoại tuyến: $e');
+  }
 
   // Initialize Dependency Injection
-  await di.init();
+  try {
+    await di.init();
+  } catch (e) {
+    debugPrint('ℹ️ DI Init status: $e');
+  }
 
   runApp(const TrekGuardApp());
 }

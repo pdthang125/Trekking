@@ -7,6 +7,7 @@ part 'app_database.g.dart';
 // ─── Table Definitions ────────────────────────────────────────────────────────
 
 /// First Aid Guides — seeded from assets/data/first_aid_guides.json
+@DataClassName('FirstAidGuideData')
 class FirstAidGuides extends Table {
   TextColumn get id => text()();
   TextColumn get conditionName => text()();
