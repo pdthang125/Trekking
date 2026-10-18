@@ -3,7 +3,7 @@
 > **Đơn vị:** Khoa Khoa học Máy tính — Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn (VKU)  
 > **Giảng viên hướng dẫn:** TS. Nguyễn Thanh Tuấn  
 > **Mã nguồn GitHub:** [https://github.com/pdthang125/Trekking](https://github.com/pdthang125/Trekking)  
-> **Thời lượng thực hiện:** 7 Tuần Tăng Tốc (Tuần 1 — Tuần 7 Bảo Vệ)
+> **Thời lượng thực hiện:** 7 Tuần
 > **Chiến lược phân bổ:** Member 1 (Leader) trực tiếp nắm giữ 4 lõi kỹ thuật khó nhất trên Mobile (TFLite Inference Engine, Background GPS Engine, Offline Map Tile Caching, Hardware SOS Controller).
 
 ---

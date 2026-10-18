@@ -1,0 +1,23 @@
+symptom_text,condition_id,severity,language
+"người lạnh run rẩy môi tím tái nói lắp bắp",hypothermia,emergency,vi
+"lạc đường trời mưa lạnh ngấm nước run rẩy mất ý thức",hypothermia,emergency,vi
+"shivering uncontrollably slurred speech cold skin",hypothermia,emergency,en
+"chóng mặt buồn nôn da nóng ran đỏ bừng không ra mồ hôi",heatstroke,emergency,vi
+"ngất xỉu say nắng đi ngoài trời nắng gắt thở gấp",heatstroke,emergency,vi
+"dizziness confusion hot red dry skin high fever outdoors",heatstroke,emergency,en
+"bị rắn cắn ở bắp chân có hai vết răng đau buốt sưng phù",snake_bite,emergency,vi
+"hai lỗ răng rỉ máu sưng tấy đau nhức hoa mắt sụp mí",snake_bite,emergency,vi
+"two puncture wounds severe swelling burning pain snake bite",snake_bite,emergency,en
+"trẹo chân khi bước xuống dốc cổ chân sưng đau không đứng được",fracture_sprain,urgent,vi
+"nghe tiếng rắc ở khớp gối đau nhói biến dạng không cử động được",fracture_sprain,emergency,vi
+"twisted ankle swelling unable to bear weight pain on knee",fracture_sprain,urgent,en
+"bị ong vò vẽ đốt nhiều nốt sưng to khó thở nghẹn cổ họng",anaphylaxis,emergency,vi
+"dị ứng phấn hoa khó thở nổi mề đay ngứa toàn thân",anaphylaxis,emergency,vi
+"severe insect sting difficulty breathing throat swelling",anaphylaxis,emergency,en
+"đau bụng dữ dội nôn mửa tiêu chảy sau khi uống nước suối",food_poisoning,urgent,vi
+"ngộ độc nấm rừng đau quặn bụng toát mồ hôi lạnh",food_poisoning,emergency,vi
+"severe cramps vomiting diarrhea after drinking stream water",food_poisoning,urgent,en
+"vết cắt sâu chảy máu xối xả đè ép băng không cầm",bleeding_wound,emergency,vi
+"deep cut heavy bleeding unable to stop with direct pressure",bleeding_wound,emergency,en
+"lên độ cao 2500m đau đầu như búa bổ chóng mặt tức ngực",altitude_sickness,urgent,vi
+"high altitude headache nausea shortness of breath fatigue",altitude_sickness,urgent,en
