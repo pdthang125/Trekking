@@ -1,5 +1,3 @@
-import '../../../core/error/failures.dart';
-
 /// Represents a medical entity (symptom tag)
 class Symptom extends Object {
   final String id;

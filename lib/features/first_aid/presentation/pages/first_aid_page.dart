@@ -131,7 +131,7 @@ class _LoadingWidget extends StatelessWidget {
 }
 
 class _GuidesListWidget extends StatelessWidget {
-  final dynamic guides;
+  final List<FirstAidGuide> guides;
   const _GuidesListWidget({required this.guides});
 
   @override

@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import '../entities/navigation_entities.dart';
+import '../../domain/entities/navigation_entities.dart';
 
 // ─── States ──────────────────────────────────────────────────────────────────
 

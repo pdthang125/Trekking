@@ -1,6 +1,11 @@
 import 'package:equatable/equatable.dart';
 import '../../domain/entities/first_aid_entities.dart';
 
+import 'first_aid_bloc_handler.dart';
+export 'first_aid_bloc_handler.dart';
+
+typedef FirstAidBloc = FirstAidBlocHandler;
+
 /// States for FirstAidBloc
 abstract class FirstAidState extends Equatable {
   const FirstAidState();
