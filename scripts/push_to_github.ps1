@@ -16,19 +16,13 @@ param(
     [string]$RepoName = "Trekking"
 )
 
-if (-not $GitHubToken) {
-    Write-Host "❌ Cần GITHUB_TOKEN. Chạy: `$env:GITHUB_TOKEN='your_token_here'"
-    Write-Host "   Hoặc: .\push_to_github.ps1 -GitHubToken 'your_token'"
-    exit 1
-}
-
-$env:PATH = "C:\Program Files\Git\cmd;" + $env:PATH
-
+$env:PATH = "C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI;" + $env:PATH
 Set-Location "C:\Trekking\trekguard_ai"
 
-# Set remote URL with token
-$remoteUrl = "https://${GitHubUsername}:${GitHubToken}@github.com/${GitHubUsername}/${RepoName}.git"
-git remote set-url origin $remoteUrl
+if ($GitHubToken) {
+    $remoteUrl = "https://${GitHubUsername}:${GitHubToken}@github.com/${GitHubUsername}/${RepoName}.git"
+    git remote set-url origin $remoteUrl
+}
 
 Write-Host "🚀 Pushing to https://github.com/$GitHubUsername/$RepoName ..."
 git push -u origin main
