@@ -22,7 +22,7 @@ dependencies:
 
   # ─── Local Database (Offline-First) ────────────────────────────────
   drift: ^2.18.0
-  drift_flutter: ^0.2.1
+  drift_flutter: 0.2.2
   sqlite3_flutter_libs: ^0.5.22
 
   # ─── Local Key-Value Cache ─────────────────────────────────────────
