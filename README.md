@@ -48,7 +48,7 @@ CI/CD:        Fastlane + GitHub Actions
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/your-org/trekguard_ai.git
+git clone https://github.com/pdthang125/Trekking
 cd trekguard_ai
 
 # 2. Install dependencies
