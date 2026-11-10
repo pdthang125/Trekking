@@ -5,7 +5,11 @@ import 'package:go_router/go_router.dart';
 import '../../../../core/router/app_router.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../bloc/auth_bloc.dart';
+import '../bloc/auth_bloc_handler.dart';
 import '../pages/auth_page.dart';
+
+// Type aliases for consistency
+typedef AuthBloc = AuthBlocHandler;
 
 /// Wrapper that checks auth state and redirects accordingly
 class AuthGuard extends StatelessWidget {

@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 // ─── States ──────────────────────────────────────────────────────────────────
 
@@ -53,3 +54,69 @@ class RegisterWithEmailEvent extends AuthEvent {
 class ContinueAnonymousEvent extends AuthEvent { const ContinueAnonymousEvent(); }
 
 class LogoutEvent extends AuthEvent { const LogoutEvent(); }
+
+// ─── Bloc ────────────────────────────────────────────────────────────────────
+
+/// Placeholder AuthBloc - TODO: Implement with actual auth logic
+class AuthBloc extends Bloc<AuthEvent, AuthState> {
+  AuthBloc() : super(const AuthInitial()) {
+    on<CheckAuthStatusEvent>(_onCheckAuthStatus);
+    on<LoginWithEmailEvent>(_onLoginWithEmail);
+    on<RegisterWithEmailEvent>(_onRegisterWithEmail);
+    on<ContinueAnonymousEvent>(_onContinueAnonymous);
+    on<LogoutEvent>(_onLogout);
+  }
+
+  Future<void> _onCheckAuthStatus(
+    CheckAuthStatusEvent event,
+    Emitter<AuthState> emit,
+  ) async {
+    emit(const AuthLoading());
+    // TODO: Check actual auth status
+    await Future.delayed(const Duration(milliseconds: 500));
+    emit(const AuthUnauthenticated());
+  }
+
+  Future<void> _onLoginWithEmail(
+    LoginWithEmailEvent event,
+    Emitter<AuthState> emit,
+  ) async {
+    emit(const AuthLoading());
+    // TODO: Implement actual login
+    await Future.delayed(const Duration(seconds: 1));
+    emit(const AuthAuthenticated(userId: 'temp-user-id'));
+  }
+
+  Future<void> _onRegisterWithEmail(
+    RegisterWithEmailEvent event,
+    Emitter<AuthState> emit,
+  ) async {
+    emit(const AuthLoading());
+    // TODO: Implement actual registration
+    await Future.delayed(const Duration(seconds: 1));
+    emit(const AuthAuthenticated(userId: 'temp-user-id'));
+  }
+
+  Future<void> _onContinueAnonymous(
+    ContinueAnonymousEvent event,
+    Emitter<AuthState> emit,
+  ) async {
+    emit(const AuthLoading());
+    // TODO: Implement anonymous login
+    await Future.delayed(const Duration(milliseconds: 500));
+    emit(const AuthAuthenticated(
+      userId: 'anonymous-user',
+      isAnonymous: true,
+    ));
+  }
+
+  Future<void> _onLogout(
+    LogoutEvent event,
+    Emitter<AuthState> emit,
+  ) async {
+    emit(const AuthLoading());
+    // TODO: Implement actual logout
+    await Future.delayed(const Duration(milliseconds: 300));
+    emit(const AuthUnauthenticated());
+  }
+}
