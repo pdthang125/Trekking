@@ -6,6 +6,9 @@ analyzer:
     - "**/*.freezed.dart"
     - "**/*.config.dart"
     - "lib/core/database/app_database.g.dart"
+    - build/**
+    - android/**
+    - ios/**
   errors:
     missing_required_param: error
     missing_return: error
@@ -22,5 +25,12 @@ linter:
     avoid_unnecessary_containers: true
     sized_box_for_whitespace: true
     avoid_redundant_argument_values: false
+    
+    # ── Relaxed rules for development ────────────────────────
+    public_member_api_docs: false           # Không bắt buộc doc comments
+    lines_longer_than_80_chars: false       # Cho phép dòng dài hơn 80 chars
+    require_trailing_commas: false          # Không bắt buộc trailing commas
+    inference_failure_on_instance_creation: false
+    inference_failure_on_function_invocation: false
     # ── Allow TODO during development ────────────────────────
     # comment_references: false

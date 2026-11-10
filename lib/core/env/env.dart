@@ -8,12 +8,12 @@ class Env {
   // ─── Supabase ─────────────────────────────────────────────────────
   static const String supabaseUrl = String.fromEnvironment(
     'SUPABASE_URL',
-    defaultValue: 'https://YOUR_PROJECT.supabase.co',
+    defaultValue: 'https://YOUR_PROJECT_ID.supabase.co',
   );
 
   static const String supabaseAnonKey = String.fromEnvironment(
     'SUPABASE_ANON_KEY',
-    defaultValue: 'YOUR_ANON_KEY',
+    defaultValue: 'your_supabase_anon_key_here',
   );
 
   // ─── Gemini API ───────────────────────────────────────────────────

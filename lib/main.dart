@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'core/di/injection_container.dart' as di;
+import 'core/network/sync_service.dart';
 import 'core/theme/app_theme.dart';
 import 'core/router/app_router.dart';
 import 'core/env/env.dart';
@@ -27,6 +28,8 @@ Future<void> main() async {
   // Initialize Dependency Injection
   try {
     await di.init();
+    // Khởi động lắng nghe kết nối mạng để tự động đồng bộ ngầm
+    di.sl<SyncService>().startListening();
   } catch (e) {
     debugPrint('ℹ️ DI Init status: $e');
   }
