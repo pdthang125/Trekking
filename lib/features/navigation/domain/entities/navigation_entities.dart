@@ -62,4 +62,58 @@ class TripEntity {
     this.maxAltitude,
     this.synced = false,
   });
+
+  /// Kiểm tra chuyến đi đang hoạt động
+  bool get isActive => endedAt == null;
+
+  /// Thời gian chuyến đi
+  Duration? get duration {
+    if (startedAt == null) return null;
+    final end = endedAt ?? DateTime.now();
+    return end.difference(startedAt!);
+  }
+
+  /// Tốc độ trung bình (km/h)
+  double? get avgSpeedKmh {
+    final d = duration;
+    if (d == null || d.inSeconds == 0 || totalDistanceKm == 0) return null;
+    return totalDistanceKm / (d.inSeconds / 3600);
+  }
+
+  TripEntity copyWith({
+    String? id,
+    String? name,
+    String? notes,
+    DateTime? startedAt,
+    DateTime? endedAt,
+    double? totalDistanceKm,
+    double? maxAltitude,
+    bool? synced,
+  }) {
+    return TripEntity(
+      id: id ?? this.id,
+      name: name ?? this.name,
+      notes: notes ?? this.notes,
+      startedAt: startedAt ?? this.startedAt,
+      endedAt: endedAt ?? this.endedAt,
+      totalDistanceKm: totalDistanceKm ?? this.totalDistanceKm,
+      maxAltitude: maxAltitude ?? this.maxAltitude,
+      synced: synced ?? this.synced,
+    );
+  }
+}
+
+/// Thống kê tóm tắt chuyến đi
+class TripSummary {
+  final TripEntity trip;
+  final int trackPointCount;
+  final int waypointCount;
+  final Duration? duration;
+
+  const TripSummary({
+    required this.trip,
+    required this.trackPointCount,
+    required this.waypointCount,
+    this.duration,
+  });
 }

@@ -1,6 +1,11 @@
 import 'package:equatable/equatable.dart';
 import '../../domain/entities/navigation_entities.dart';
 
+import 'navigation_bloc_handler.dart';
+export 'navigation_bloc_handler.dart';
+
+typedef NavigationBloc = NavigationBlocHandler;
+
 // ─── States ──────────────────────────────────────────────────────────────────
 
 abstract class NavigationState extends Equatable {

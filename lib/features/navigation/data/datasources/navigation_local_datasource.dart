@@ -16,8 +16,8 @@ abstract class NavigationLocalDatasource {
   Future<WaypointEntity> addWaypoint({required String tripId, required String name, required GpsPoint position, String? note});
   Future<List<WaypointEntity>> getWaypoints(String tripId);
   Future<void> deleteWaypoint(String waypointId);
-  Future<List<int>> getUnsyncedTrackPointIds();
-  Future<void> markTrackPointsSynced(List<int> ids);
+  Future<List<String>> getUnsyncedTrackPointIds();
+  Future<void> markTrackPointsSynced(List<String> ids);
 }
 
 @Injectable(as: NavigationLocalDatasource)
@@ -70,10 +70,10 @@ class NavigationLocalDatasourceImpl implements NavigationLocalDatasource {
           );
           _streamController?.add(point);
         },
-        onError: (e) => _streamController?.addError(e),
+        onError: (Object e) => _streamController?.addError(e),
       );
     } catch (e) {
-      _streamController?.addError(e);
+      _streamController?.addError(e as Object);
     }
   }
 
@@ -168,7 +168,7 @@ class NavigationLocalDatasourceImpl implements NavigationLocalDatasource {
   }
 
   @override
-  Future<List<int>> getUnsyncedTrackPointIds() async {
+  Future<List<String>> getUnsyncedTrackPointIds() async {
     final rows = await (db.select(db.trackPoints)
       ..where((t) => t.synced.equals(false)))
       .get();
@@ -176,7 +176,7 @@ class NavigationLocalDatasourceImpl implements NavigationLocalDatasource {
   }
 
   @override
-  Future<void> markTrackPointsSynced(List<int> ids) async {
+  Future<void> markTrackPointsSynced(List<String> ids) async {
     await (db.update(db.trackPoints)
       ..where((t) => t.id.isIn(ids)))
       .write(const TrackPointsCompanion(synced: Value(true)));
