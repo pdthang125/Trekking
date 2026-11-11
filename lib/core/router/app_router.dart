@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../features/first_aid/presentation/bloc/first_aid_bloc.dart';
 import '../../features/first_aid/presentation/pages/first_aid_page.dart';
 import '../../features/navigation/presentation/pages/navigation_page.dart';
 import '../../features/navigation/presentation/pages/offline_map_manager_page.dart';
 import '../../features/sos/presentation/pages/sos_page.dart';
 import '../../features/trail/presentation/pages/trail_page.dart';
 import '../../features/ai_assistant/presentation/pages/ai_assistant_page.dart';
+import '../di/injection_container.dart';
 import '../pages/home_page.dart';
 import '../pages/splash_page.dart';
 
@@ -44,7 +47,10 @@ class AppRouter {
           GoRoute(
             path: AppRoutes.firstAid,
             name: 'first_aid',
-            builder: (context, state) => const FirstAidPage(),
+            builder: (context, state) => BlocProvider<FirstAidBloc>(
+              create: (_) => sl<FirstAidBloc>()..add(const LoadAllGuidesEvent()),
+              child: const FirstAidPage(),
+            ),
           ),
           GoRoute(
             path: AppRoutes.navigation,
