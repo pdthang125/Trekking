@@ -71,9 +71,27 @@ class Trips extends Table {
   Set<Column> get primaryKey => {id};
 }
 
+/// Lịch sử sự kiện SOS — đẩy lên server khi có mạng (khớp bảng sos_events)
+class SosEvents extends Table {
+  TextColumn get id => text()(); // UUID
+  RealColumn get latitude => real().nullable()();
+  RealColumn get longitude => real().nullable()();
+
+  /// Thời điểm ghi nhận vị trí (có thể cũ hơn createdAt nếu chưa có GPS fix).
+  DateTimeColumn get locationTime => dateTime().nullable()();
+  TextColumn get message => text().nullable()();
+  DateTimeColumn get createdAt => dateTime().withDefault(currentDateAndTime)();
+  BoolColumn get synced => boolean().withDefault(const Constant(false))();
+
+  @override
+  Set<Column> get primaryKey => {id};
+}
+
 // ─── Database Definition ──────────────────────────────────────────────────────
 
-@DriftDatabase(tables: [FirstAidGuides, TrackPoints, Waypoints, Trips])
+@DriftDatabase(
+  tables: [FirstAidGuides, TrackPoints, Waypoints, Trips, SosEvents],
+)
 @singleton
 class AppDatabase extends _$AppDatabase {
   AppDatabase() : super(_openConnection());
@@ -87,7 +105,10 @@ class AppDatabase extends _$AppDatabase {
       await m.createAll();
     },
     onUpgrade: (m, from, to) async {
-      // Handle future migrations here
+      await m.createAll();
+    },
+    beforeOpen: (details) async {
+      await customStatement('PRAGMA foreign_keys = ON');
     },
   );
 

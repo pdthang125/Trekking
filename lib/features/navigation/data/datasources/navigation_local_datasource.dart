@@ -70,10 +70,10 @@ class NavigationLocalDatasourceImpl implements NavigationLocalDatasource {
           );
           _streamController?.add(point);
         },
-        onError: (e) => _streamController?.addError(e),
+        onError: (Object e) => _streamController?.addError(e),
       );
     } catch (e) {
-      _streamController?.addError(e);
+      _streamController?.addError(e as Object);
     }
   }
 

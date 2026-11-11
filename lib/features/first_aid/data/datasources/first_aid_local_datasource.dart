@@ -100,7 +100,7 @@ class FirstAidLocalDatasourceImpl implements FirstAidLocalDatasource {
   @override
   Future<void> seedFromAssets() async {
     final jsonStr = await rootBundle.loadString('assets/data/first_aid_guides.json');
-    final List<dynamic> data = json.decode(jsonStr);
+    final List<dynamic> data = json.decode(jsonStr) as List<dynamic>;
 
     await db.batch((batch) {
       for (final item in data) {

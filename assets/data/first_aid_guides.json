@@ -6,38 +6,13 @@
     "severity": "danger",
     "description": "A venomous snake bite requires immediate first aid and evacuation.",
     "descriptionVi": "Rắn độc cắn cần sơ cứu ngay lập tức và di tản khẩn cấp.",
-    "tags": ["snake", "bite", "venom", "rắn", "cắn", "sưng", "độc"],
+    "tags": ["snake", "bite", "venom", "rắn", "cắn", "sưng", "độc", "nọc"],
     "steps": [
-      {
-        "stepNumber": 1,
-        "instruction": "Keep the victim calm and immobilize the bitten limb below heart level.",
-        "instructionVi": "Giữ nạn nhân bình tĩnh, cố định chi bị cắn thấp hơn tim.",
-        "isWarning": false
-      },
-      {
-        "stepNumber": 2,
-        "instruction": "Remove watches, rings, tight clothing from the affected area.",
-        "instructionVi": "Tháo đồng hồ, nhẫn, quần áo chật ở vùng bị cắn.",
-        "isWarning": false
-      },
-      {
-        "stepNumber": 3,
-        "instruction": "Clean the bite wound gently with soap and water.",
-        "instructionVi": "Rửa nhẹ vết cắn bằng xà phòng và nước sạch.",
-        "isWarning": false
-      },
-      {
-        "stepNumber": 4,
-        "instruction": "Mark the edge of swelling with a pen every 15 minutes to track progression.",
-        "instructionVi": "Đánh dấu rìa sưng bằng bút mỗi 15 phút để theo dõi tiến triển.",
-        "isWarning": true
-      },
-      {
-        "stepNumber": 5,
-        "instruction": "Evacuate immediately — this is a medical emergency.",
-        "instructionVi": "Di tản ngay lập tức — đây là trường hợp cấp cứu y tế.",
-        "isWarning": true
-      }
+      { "stepNumber": 1, "instruction": "Keep the victim calm and immobilize the bitten limb below heart level.", "instructionVi": "Giữ nạn nhân bình tĩnh, cố định chi bị cắn thấp hơn tim.", "isWarning": false },
+      { "stepNumber": 2, "instruction": "Remove watches, rings, tight clothing from the affected area.", "instructionVi": "Tháo đồng hồ, nhẫn, quần áo chật ở vùng bị cắn.", "isWarning": false },
+      { "stepNumber": 3, "instruction": "Clean the bite wound gently with soap and water.", "instructionVi": "Rửa nhẹ vết cắn bằng xà phòng và nước sạch.", "isWarning": false },
+      { "stepNumber": 4, "instruction": "Mark the edge of swelling with a pen every 15 minutes to track progression.", "instructionVi": "Đánh dấu rìa sưng bằng bút mỗi 15 phút để theo dõi tiến triển.", "isWarning": true },
+      { "stepNumber": 5, "instruction": "Evacuate immediately — this is a medical emergency.", "instructionVi": "Di tản ngay lập tức — đây là trường hợp cấp cứu y tế.", "isWarning": true }
     ],
     "doNots": ["Do not suck out venom", "Do not apply tourniquet", "Do not cut the wound", "Do not apply ice"],
     "doNotsVi": ["Không hút nọc độc", "Không ga-rô", "Không rạch vết thương", "Không chườm đá"],
@@ -51,32 +26,12 @@
     "severity": "warning",
     "description": "Ankle sprains are common on uneven terrain. Apply RICE protocol.",
     "descriptionVi": "Trẹo mắt cá thường gặp trên địa hình gồ ghề. Áp dụng phương pháp RICE.",
-    "tags": ["sprain", "ankle", "trẹo", "mắt cá", "đau khớp", "sưng chân"],
+    "tags": ["sprain", "ankle", "trẹo", "mắt cá", "đau khớp", "sưng chân", "bong gân"],
     "steps": [
-      {
-        "stepNumber": 1,
-        "instruction": "Rest — stop walking on the injured ankle immediately.",
-        "instructionVi": "Nghỉ ngơi — ngừng đi lại ngay lập tức trên mắt cá bị thương.",
-        "isWarning": false
-      },
-      {
-        "stepNumber": 2,
-        "instruction": "Ice — apply cold pack or cold stream water for 20 minutes.",
-        "instructionVi": "Lạnh — chườm đá lạnh hoặc nước suối lạnh 20 phút.",
-        "isWarning": false
-      },
-      {
-        "stepNumber": 3,
-        "instruction": "Compression — wrap with elastic bandage, not too tight.",
-        "instructionVi": "Băng ép — băng bằng băng thun, không quá chặt.",
-        "isWarning": false
-      },
-      {
-        "stepNumber": 4,
-        "instruction": "Elevation — keep the foot elevated above heart level.",
-        "instructionVi": "Nâng cao — giữ chân cao hơn tim.",
-        "isWarning": false
-      }
+      { "stepNumber": 1, "instruction": "Rest — stop walking on the injured ankle immediately.", "instructionVi": "Nghỉ ngơi — ngừng đi lại ngay lập tức trên mắt cá bị thương.", "isWarning": false },
+      { "stepNumber": 2, "instruction": "Ice — apply cold pack or cold stream water for 20 minutes.", "instructionVi": "Lạnh — chườm đá lạnh hoặc nước suối lạnh 20 phút.", "isWarning": false },
+      { "stepNumber": 3, "instruction": "Compression — wrap with elastic bandage, not too tight.", "instructionVi": "Băng ép — băng bằng băng thun, không quá chặt.", "isWarning": false },
+      { "stepNumber": 4, "instruction": "Elevation — keep the foot elevated above heart level.", "instructionVi": "Nâng cao — giữ chân cao hơn tim.", "isWarning": false }
     ],
     "doNots": ["Do not massage the injured area", "Do not walk on it if severe"],
     "doNotsVi": ["Không xoa bóp vùng bị thương", "Không đi lại nếu đau nặng"],
@@ -86,42 +41,17 @@
   {
     "id": "heat-exhaustion-001",
     "conditionName": "Heat Exhaustion",
-    "conditionNameVi": "Kiệt Sức Do Nóng",
+    "conditionNameVi": "Kiệt Sức Do Nóng / Say Nắng",
     "severity": "warning",
     "description": "Heat exhaustion occurs when the body overheats due to physical exertion.",
-    "descriptionVi": "Kiệt sức do nóng xảy ra khi cơ thể quá nóng do hoạt động thể chất.",
-    "tags": ["heat", "exhaustion", "dehydration", "nóng", "kiệt sức", "mất nước", "chóng mặt"],
+    "descriptionVi": "Kiệt sức do nóng xảy ra khi cơ thể quá nóng do hoạt động thể chất mạnh.",
+    "tags": ["heat", "exhaustion", "dehydration", "nóng", "kiệt sức", "mất nước", "chóng mặt", "say nắng", "sốt"],
     "steps": [
-      {
-        "stepNumber": 1,
-        "instruction": "Move to shade or cool area immediately.",
-        "instructionVi": "Di chuyển đến bóng mát hoặc nơi mát mẻ ngay lập tức.",
-        "isWarning": false
-      },
-      {
-        "stepNumber": 2,
-        "instruction": "Remove excess clothing and equipment.",
-        "instructionVi": "Cởi bớt quần áo và thiết bị không cần thiết.",
-        "isWarning": false
-      },
-      {
-        "stepNumber": 3,
-        "instruction": "Give cool water to drink — small sips, frequently.",
-        "instructionVi": "Cho uống nước mát — từng ngụm nhỏ, thường xuyên.",
-        "isWarning": false
-      },
-      {
-        "stepNumber": 4,
-        "instruction": "Apply wet cloth to neck, armpits, groin.",
-        "instructionVi": "Đặt khăn ướt lên cổ, nách, bẹn.",
-        "isWarning": false
-      },
-      {
-        "stepNumber": 5,
-        "instruction": "Fan the victim to assist cooling.",
-        "instructionVi": "Quạt cho nạn nhân để hỗ trợ làm mát.",
-        "isWarning": false
-      }
+      { "stepNumber": 1, "instruction": "Move to shade or cool area immediately.", "instructionVi": "Di chuyển đến bóng mát hoặc nơi mát mẻ ngay lập tức.", "isWarning": false },
+      { "stepNumber": 2, "instruction": "Remove excess clothing and equipment.", "instructionVi": "Cởi bớt quần áo và thiết bị không cần thiết.", "isWarning": false },
+      { "stepNumber": 3, "instruction": "Give cool water to drink — small sips, frequently.", "instructionVi": "Cho uống nước mát — từng ngụm nhỏ, thường xuyên.", "isWarning": false },
+      { "stepNumber": 4, "instruction": "Apply wet cloth to neck, armpits, groin.", "instructionVi": "Đặt khăn ướt lên cổ, nách, bẹn.", "isWarning": false },
+      { "stepNumber": 5, "instruction": "Fan the victim to assist cooling.", "instructionVi": "Quạt cho nạn nhân để hỗ trợ làm mát.", "isWarning": false }
     ],
     "doNots": ["Do not give alcohol", "Do not leave the victim alone"],
     "doNotsVi": ["Không cho uống rượu", "Không để nạn nhân một mình"],
@@ -135,36 +65,252 @@
     "severity": "danger",
     "description": "Hypothermia is life-threatening. Core temperature drops dangerously low.",
     "descriptionVi": "Hạ thân nhiệt đe dọa tính mạng. Nhiệt độ cơ thể giảm xuống mức nguy hiểm.",
-    "tags": ["hypothermia", "cold", "shivering", "hạ thân nhiệt", "lạnh", "run rẩy"],
+    "tags": ["hypothermia", "cold", "shivering", "hạ thân nhiệt", "lạnh", "run rẩy", "tê cóng", "mất nhiệt"],
     "steps": [
-      {
-        "stepNumber": 1,
-        "instruction": "Move victim to shelter — out of wind and wet conditions.",
-        "instructionVi": "Đưa nạn nhân vào nơi trú ẩn — tránh gió và điều kiện ẩm ướt.",
-        "isWarning": false
-      },
-      {
-        "stepNumber": 2,
-        "instruction": "Remove wet clothing, replace with dry insulation.",
-        "instructionVi": "Cởi quần áo ướt, thay bằng quần áo khô giữ ấm.",
-        "isWarning": false
-      },
-      {
-        "stepNumber": 3,
-        "instruction": "Apply heat to core areas: chest, neck, armpits, groin.",
-        "instructionVi": "Chườm ấm vào vùng cốt lõi: ngực, cổ, nách, bẹn.",
-        "isWarning": true
-      },
-      {
-        "stepNumber": 4,
-        "instruction": "Give warm sweet drinks if victim is conscious and able to swallow.",
-        "instructionVi": "Cho uống đồ uống ấm ngọt nếu nạn nhân tỉnh táo và có thể nuốt.",
-        "isWarning": false
-      }
+      { "stepNumber": 1, "instruction": "Move victim to shelter — out of wind and wet conditions.", "instructionVi": "Đưa nạn nhân vào nơi trú ẩn — tránh gió và điều kiện ẩm ướt.", "isWarning": false },
+      { "stepNumber": 2, "instruction": "Remove wet clothing, replace with dry insulation.", "instructionVi": "Cởi quần áo ướt, thay bằng quần áo khô giữ ấm.", "isWarning": false },
+      { "stepNumber": 3, "instruction": "Apply heat to core areas: chest, neck, armpits, groin.", "instructionVi": "Chườm ấm vào vùng cốt lõi: ngực, cổ, nách, bẹn.", "isWarning": true },
+      { "stepNumber": 4, "instruction": "Give warm sweet drinks if victim is conscious and able to swallow.", "instructionVi": "Cho uống đồ uống ấm ngọt nếu nạn nhân tỉnh táo và có thể nuốt.", "isWarning": false }
     ],
     "doNots": ["Do not rub extremities vigorously", "Do not give alcohol", "Do not apply direct heat to skin"],
     "doNotsVi": ["Không xoa mạnh tay chân", "Không cho uống rượu", "Không đặt nhiệt trực tiếp lên da"],
     "whenToEvacuate": "All cases of hypothermia — evacuate as soon as possible",
     "whenToEvacuateVi": "Tất cả trường hợp hạ thân nhiệt — di tản sớm nhất có thể"
+  },
+  {
+    "id": "altitude-sickness-001",
+    "conditionName": "Altitude Sickness (AMS)",
+    "conditionNameVi": "Say Độ Cao (Bệnh Núi Cao)",
+    "severity": "danger",
+    "description": "Acute Mountain Sickness occurs above 2500m. Can progress to life-threatening HACE/HAPE.",
+    "descriptionVi": "Bệnh núi cao cấp tính xảy ra trên 2500m. Có thể tiến triển thành HACE/HAPE đe dọa tính mạng.",
+    "tags": ["altitude", "sickness", "AMS", "HACE", "HAPE", "độ cao", "say núi", "nhức đầu", "khó thở", "nôn", "buồn nôn"],
+    "steps": [
+      { "stepNumber": 1, "instruction": "Stop ascending immediately. Rest and acclimatize at current altitude.", "instructionVi": "Dừng leo ngay. Nghỉ ngơi và thích nghi với độ cao hiện tại.", "isWarning": true },
+      { "stepNumber": 2, "instruction": "If symptoms are mild: rest, hydrate, do not ascend for 24 hours.", "instructionVi": "Nếu triệu chứng nhẹ: nghỉ ngơi, bù nước, không leo thêm trong 24 giờ.", "isWarning": false },
+      { "stepNumber": 3, "instruction": "Take Ibuprofen or Paracetamol for headache.", "instructionVi": "Dùng Ibuprofen hoặc Paracetamol để giảm đau đầu.", "isWarning": false },
+      { "stepNumber": 4, "instruction": "If symptoms worsen: descend at least 500–1000m immediately.", "instructionVi": "Nếu triệu chứng xấu hơn: xuống thấp ít nhất 500–1000m ngay.", "isWarning": true },
+      { "stepNumber": 5, "instruction": "Administer supplemental oxygen if available.", "instructionVi": "Cung cấp oxy bổ sung nếu có.", "isWarning": false }
+    ],
+    "doNots": ["Do not ascend with symptoms", "Do not take sleeping pills", "Do not ignore worsening symptoms"],
+    "doNotsVi": ["Không leo khi có triệu chứng", "Không uống thuốc ngủ", "Không bỏ qua triệu chứng xấu hơn"],
+    "whenToEvacuate": "Any signs of HACE (confusion, ataxia) or HAPE (cough, pink froth, blue lips)",
+    "whenToEvacuateVi": "Bất kỳ dấu hiệu HACE (lú lẫn, mất thăng bằng) hoặc HAPE (ho, bọt hồng, môi xanh)"
+  },
+  {
+    "id": "dehydration-001",
+    "conditionName": "Severe Dehydration",
+    "conditionNameVi": "Mất Nước Nặng",
+    "severity": "warning",
+    "description": "Dehydration impairs physical and mental performance. Severe cases are dangerous.",
+    "descriptionVi": "Mất nước làm suy giảm thể chất và tinh thần. Trường hợp nặng rất nguy hiểm.",
+    "tags": ["dehydration", "thirst", "mất nước", "khát", "tiểu ít", "nước tiểu vàng", "mệt mỏi", "chuột rút"],
+    "steps": [
+      { "stepNumber": 1, "instruction": "Stop activity and rest in shade.", "instructionVi": "Dừng hoạt động và nghỉ ngơi ở chỗ mát.", "isWarning": false },
+      { "stepNumber": 2, "instruction": "Drink water slowly — 250ml every 15 minutes.", "instructionVi": "Uống nước từ từ — 250ml mỗi 15 phút.", "isWarning": false },
+      { "stepNumber": 3, "instruction": "Use oral rehydration salts (ORS) if available.", "instructionVi": "Dùng gói oresol (ORS) nếu có để bù điện giải.", "isWarning": false },
+      { "stepNumber": 4, "instruction": "Monitor urine color — pale yellow means adequately hydrated.", "instructionVi": "Theo dõi màu nước tiểu — vàng nhạt là đủ nước.", "isWarning": false }
+    ],
+    "doNots": ["Do not drink large amounts at once", "Do not drink saltwater", "Do not ignore severe symptoms"],
+    "doNotsVi": ["Không uống nhiều một lúc", "Không uống nước mặn", "Không bỏ qua triệu chứng nặng"],
+    "whenToEvacuate": "If unable to drink, vomiting continuously, or showing confusion",
+    "whenToEvacuateVi": "Nếu không thể uống, nôn liên tục hoặc lú lẫn"
+  },
+  {
+    "id": "blunt-trauma-001",
+    "conditionName": "Blunt Trauma / Fracture",
+    "conditionNameVi": "Chấn Thương / Gãy Xương",
+    "severity": "danger",
+    "description": "Falls on rough terrain can cause fractures or severe bruising. Immobilize and evacuate.",
+    "descriptionVi": "Ngã trên địa hình hiểm trở có thể gây gãy xương hoặc bầm nặng. Cố định và di tản.",
+    "tags": ["fracture", "bone", "gãy xương", "ngã", "chấn thương", "bầm tím", "xương", "fall"],
+    "steps": [
+      { "stepNumber": 1, "instruction": "Do not move the victim if spinal injury is suspected.", "instructionVi": "Không di chuyển nạn nhân nếu nghi ngờ chấn thương cột sống.", "isWarning": true },
+      { "stepNumber": 2, "instruction": "Immobilize the injured limb using a splint or improvised material.", "instructionVi": "Cố định chi bị thương bằng nẹp hoặc vật liệu thay thế.", "isWarning": false },
+      { "stepNumber": 3, "instruction": "Pad the splint with soft material for comfort.", "instructionVi": "Lót nệm mềm vào nẹp cho thoải mái.", "isWarning": false },
+      { "stepNumber": 4, "instruction": "Check circulation (pulse, sensation) below the injury every 15 min.", "instructionVi": "Kiểm tra tuần hoàn (mạch, cảm giác) dưới chỗ thương mỗi 15 phút.", "isWarning": true },
+      { "stepNumber": 5, "instruction": "Arrange evacuation by stretcher if possible.", "instructionVi": "Sắp xếp di tản bằng cáng nếu có thể.", "isWarning": false }
+    ],
+    "doNots": ["Do not try to straighten the fracture", "Do not remove the splint", "Do not give food or water if surgery may be needed"],
+    "doNotsVi": ["Không cố nắn xương", "Không tháo nẹp", "Không cho ăn uống nếu có thể cần phẫu thuật"],
+    "whenToEvacuate": "All suspected fractures require medical evaluation",
+    "whenToEvacuateVi": "Mọi trường hợp nghi gãy xương đều cần đánh giá y tế"
+  },
+  {
+    "id": "wound-bleeding-001",
+    "conditionName": "Severe Bleeding / Open Wound",
+    "conditionNameVi": "Chảy Máu Nặng / Vết Thương Hở",
+    "severity": "danger",
+    "description": "Uncontrolled bleeding can be life-threatening. Apply direct pressure immediately.",
+    "descriptionVi": "Chảy máu không kiểm soát có thể đe dọa tính mạng. Ấn trực tiếp ngay lập tức.",
+    "tags": ["bleeding", "wound", "blood", "chảy máu", "vết thương", "máu", "cắt", "rách", "hemorrhage"],
+    "steps": [
+      { "stepNumber": 1, "instruction": "Apply firm direct pressure with a clean cloth — do not lift to check.", "instructionVi": "Ấn chặt trực tiếp bằng vải sạch — không nhấc lên để kiểm tra.", "isWarning": true },
+      { "stepNumber": 2, "instruction": "If cloth soaks through, add more on top — do not remove.", "instructionVi": "Nếu vải thấm qua, thêm lớp khác lên trên — không tháo ra.", "isWarning": true },
+      { "stepNumber": 3, "instruction": "Elevate the wound above heart level if possible.", "instructionVi": "Nâng vết thương cao hơn tim nếu có thể.", "isWarning": false },
+      { "stepNumber": 4, "instruction": "Apply a tourniquet 5–7cm above wound for life-threatening limb bleeding.", "instructionVi": "Ga-rô cách vết thương 5–7cm phía trên nếu chảy máu chi đe dọa tính mạng.", "isWarning": true },
+      { "stepNumber": 5, "instruction": "Note the time tourniquet was applied — loosen every 1–2 hours.", "instructionVi": "Ghi giờ ga-rô — nới ra mỗi 1–2 giờ.", "isWarning": true }
+    ],
+    "doNots": ["Do not remove embedded objects", "Do not use a tourniquet for minor bleeding", "Do not use dirty cloth"],
+    "doNotsVi": ["Không rút vật đâm sâu", "Không ga-rô vì chảy máu nhỏ", "Không dùng vải bẩn"],
+    "whenToEvacuate": "Any wound that does not stop bleeding within 10–15 minutes",
+    "whenToEvacuateVi": "Bất kỳ vết thương không cầm máu được trong 10–15 phút"
+  },
+  {
+    "id": "bee-sting-001",
+    "conditionName": "Bee / Wasp Sting",
+    "conditionNameVi": "Ong Đốt",
+    "severity": "warning",
+    "description": "Bee stings are painful. Multiple stings or allergy can be life-threatening.",
+    "descriptionVi": "Ong đốt rất đau. Nhiều vết đốt hoặc dị ứng có thể đe dọa tính mạng.",
+    "tags": ["bee", "sting", "wasp", "ong", "đốt", "sưng", "ngứa", "dị ứng", "côn trùng"],
+    "steps": [
+      { "stepNumber": 1, "instruction": "Move away from the area to avoid more stings.", "instructionVi": "Rời khỏi khu vực để tránh bị đốt thêm.", "isWarning": false },
+      { "stepNumber": 2, "instruction": "Remove the stinger by scraping sideways with a card or nail — do not squeeze.", "instructionVi": "Gạt ngòi ngang bằng thẻ hoặc móng tay — không bóp.", "isWarning": false },
+      { "stepNumber": 3, "instruction": "Wash the area with soap and water.", "instructionVi": "Rửa vùng bị đốt bằng xà phòng và nước.", "isWarning": false },
+      { "stepNumber": 4, "instruction": "Apply cold compress to reduce pain and swelling.", "instructionVi": "Chườm lạnh để giảm đau và sưng.", "isWarning": false },
+      { "stepNumber": 5, "instruction": "Watch for allergic reaction: hives, throat tightening, difficulty breathing.", "instructionVi": "Theo dõi phản ứng dị ứng: nổi mề đay, thắt cổ họng, khó thở.", "isWarning": true }
+    ],
+    "doNots": ["Do not squeeze the sting site", "Do not use tweezers on the stinger"],
+    "doNotsVi": ["Không bóp vết đốt", "Không dùng nhíp gắp ngòi"],
+    "whenToEvacuate": "Signs of anaphylaxis: severe swelling, difficulty breathing, shock",
+    "whenToEvacuateVi": "Dấu hiệu sốc phản vệ: sưng nặng, khó thở, trụy tim mạch"
+  },
+  {
+    "id": "anaphylaxis-001",
+    "conditionName": "Anaphylaxis (Severe Allergic Reaction)",
+    "conditionNameVi": "Sốc Phản Vệ (Dị Ứng Nặng)",
+    "severity": "danger",
+    "description": "Anaphylaxis is a severe, life-threatening allergic reaction requiring epinephrine.",
+    "descriptionVi": "Sốc phản vệ là phản ứng dị ứng nghiêm trọng đe dọa tính mạng, cần epinephrine.",
+    "tags": ["anaphylaxis", "allergy", "shock", "sốc phản vệ", "dị ứng nặng", "khó thở", "sưng môi", "nổi mẩn", "epinephrine"],
+    "steps": [
+      { "stepNumber": 1, "instruction": "Call for emergency evacuation immediately.", "instructionVi": "Gọi hỗ trợ cấp cứu ngay lập tức.", "isWarning": true },
+      { "stepNumber": 2, "instruction": "Administer epinephrine auto-injector (EpiPen) into outer thigh if available.", "instructionVi": "Tiêm epinephrine (EpiPen) vào đùi ngoài nếu có.", "isWarning": true },
+      { "stepNumber": 3, "instruction": "Lay victim flat with legs elevated — unless unconscious or breathing difficulty.", "instructionVi": "Nằm ngửa, nâng cao chân — trừ khi mất ý thức hoặc khó thở.", "isWarning": false },
+      { "stepNumber": 4, "instruction": "If victim has stopped breathing, begin CPR.", "instructionVi": "Nếu nạn nhân ngừng thở, bắt đầu hô hấp nhân tạo (CPR).", "isWarning": true },
+      { "stepNumber": 5, "instruction": "Second EpiPen dose can be given after 5–15 minutes if no improvement.", "instructionVi": "Liều EpiPen thứ hai có thể dùng sau 5–15 phút nếu không cải thiện.", "isWarning": false }
+    ],
+    "doNots": ["Do not leave the victim alone", "Do not give antihistamines as the only treatment"],
+    "doNotsVi": ["Không để nạn nhân một mình", "Không chỉ dùng thuốc kháng histamine"],
+    "whenToEvacuate": "Immediately — anaphylaxis is always a medical emergency",
+    "whenToEvacuateVi": "Ngay lập tức — sốc phản vệ luôn là cấp cứu y tế"
+  },
+  {
+    "id": "drowning-001",
+    "conditionName": "Near-Drowning",
+    "conditionNameVi": "Đuối Nước / Suýt Chết Đuối",
+    "severity": "danger",
+    "description": "Near-drowning victims may appear fine but need immediate medical evaluation.",
+    "descriptionVi": "Nạn nhân suýt chết đuối có thể trông bình thường nhưng cần đánh giá y tế ngay.",
+    "tags": ["drowning", "water", "breathing", "đuối nước", "nước", "ngạt", "hô hấp", "CPR", "cứu đuối"],
+    "steps": [
+      { "stepNumber": 1, "instruction": "Remove victim from water safely — protect your own safety first.", "instructionVi": "Đưa nạn nhân ra khỏi nước an toàn — đảm bảo an toàn bản thân trước.", "isWarning": true },
+      { "stepNumber": 2, "instruction": "Check breathing. If absent, start CPR immediately: 30 chest compressions then 2 rescue breaths.", "instructionVi": "Kiểm tra hơi thở. Nếu không thở, bắt đầu CPR: 30 lần ép ngực rồi 2 lần thổi ngạt.", "isWarning": true },
+      { "stepNumber": 3, "instruction": "If breathing, place in recovery position (on side).", "instructionVi": "Nếu còn thở, đặt tư thế hồi phục (nằm nghiêng).", "isWarning": false },
+      { "stepNumber": 4, "instruction": "Keep warm — victims lose heat quickly even in warm water.", "instructionVi": "Giữ ấm — nạn nhân mất nhiệt nhanh kể cả trong nước ấm.", "isWarning": false },
+      { "stepNumber": 5, "instruction": "Evacuate to hospital even if victim seems recovered.", "instructionVi": "Đưa đến bệnh viện dù nạn nhân có vẻ hồi phục.", "isWarning": true }
+    ],
+    "doNots": ["Do not shake a drowning victim", "Do not hold upside down to drain water"],
+    "doNotsVi": ["Không lắc nạn nhân đuối nước", "Không dốc ngược để thoát nước"],
+    "whenToEvacuate": "All near-drowning cases must be evaluated in hospital",
+    "whenToEvacuateVi": "Mọi trường hợp suýt đuối đều phải được đánh giá tại bệnh viện"
+  },
+  {
+    "id": "food-poisoning-001",
+    "conditionName": "Food Poisoning",
+    "conditionNameVi": "Ngộ Độc Thực Phẩm",
+    "severity": "warning",
+    "description": "Food poisoning causes vomiting and diarrhea. Main risk is dehydration.",
+    "descriptionVi": "Ngộ độc thực phẩm gây nôn và tiêu chảy. Nguy cơ chính là mất nước.",
+    "tags": ["food poisoning", "vomiting", "diarrhea", "ngộ độc", "nôn", "tiêu chảy", "bụng", "đau bụng", "thực phẩm"],
+    "steps": [
+      { "stepNumber": 1, "instruction": "Stop eating and rest.", "instructionVi": "Ngừng ăn và nghỉ ngơi.", "isWarning": false },
+      { "stepNumber": 2, "instruction": "Sip small amounts of water or ORS to prevent dehydration.", "instructionVi": "Uống từng ngụm nhỏ nước hoặc oresol để tránh mất nước.", "isWarning": false },
+      { "stepNumber": 3, "instruction": "Do not force eating — wait until nausea subsides.", "instructionVi": "Không ép ăn — chờ cho đến khi hết buồn nôn.", "isWarning": false },
+      { "stepNumber": 4, "instruction": "Monitor for severe symptoms: bloody stool, high fever, confusion.", "instructionVi": "Theo dõi triệu chứng nặng: đi phân máu, sốt cao, lú lẫn.", "isWarning": true }
+    ],
+    "doNots": ["Do not take anti-diarrheal medication without advice", "Do not eat solid food while actively vomiting"],
+    "doNotsVi": ["Không tự dùng thuốc cầm tiêu chảy", "Không ăn đặc khi đang nôn"],
+    "whenToEvacuate": "Bloody stool, high fever >38.5°C, cannot keep fluids down for 8+ hours",
+    "whenToEvacuateVi": "Đi phân máu, sốt cao >38.5°C, không giữ được nước trong 8+ giờ"
+  },
+  {
+    "id": "burn-001",
+    "conditionName": "Burns",
+    "conditionNameVi": "Bỏng",
+    "severity": "warning",
+    "description": "Burns from campfire, stoves, or sun. Cool immediately with water.",
+    "descriptionVi": "Bỏng từ lửa trại, bếp hoặc nắng. Làm mát ngay bằng nước.",
+    "tags": ["burn", "fire", "bỏng", "lửa", "phồng rộp", "da đỏ", "nóng rát", "campfire", "bếp"],
+    "steps": [
+      { "stepNumber": 1, "instruction": "Cool the burn under cool (not ice cold) running water for 20 minutes.", "instructionVi": "Làm mát vết bỏng dưới nước mát (không đá lạnh) chảy trong 20 phút.", "isWarning": true },
+      { "stepNumber": 2, "instruction": "Remove jewelry and clothing near the burn — but not if stuck to skin.", "instructionVi": "Tháo trang sức và quần áo gần chỗ bỏng — trừ khi dính vào da.", "isWarning": false },
+      { "stepNumber": 3, "instruction": "Cover with a clean, non-fluffy material (cling wrap or clean plastic bag).", "instructionVi": "Băng bằng vật liệu sạch không xơ bông (màng bọc thực phẩm hoặc túi nhựa sạch).", "isWarning": false },
+      { "stepNumber": 4, "instruction": "Do not burst blisters — they protect against infection.", "instructionVi": "Không chọc vỡ mụn nước — chúng bảo vệ chống nhiễm trùng.", "isWarning": true }
+    ],
+    "doNots": ["Do not use ice", "Do not apply butter, oil, or toothpaste", "Do not use fluffy cotton"],
+    "doNotsVi": ["Không chườm đá", "Không bôi bơ, dầu, kem đánh răng", "Không dùng bông"],
+    "whenToEvacuate": "Burns larger than the victim's palm, on face/hands/genitals, or full thickness",
+    "whenToEvacuateVi": "Bỏng lớn hơn bàn tay nạn nhân, ở mặt/tay/vùng kín, hoặc bỏng sâu"
+  },
+  {
+    "id": "lightning-strike-001",
+    "conditionName": "Lightning Strike",
+    "conditionNameVi": "Sét Đánh",
+    "severity": "danger",
+    "description": "Lightning strike victims need immediate CPR. They carry no electrical charge.",
+    "descriptionVi": "Nạn nhân bị sét đánh cần CPR ngay. Họ không mang điện nên an toàn để chạm vào.",
+    "tags": ["lightning", "thunder", "electric", "sét", "sét đánh", "bão", "giông", "điện", "CPR"],
+    "steps": [
+      { "stepNumber": 1, "instruction": "Move to safety — lightning can strike the same spot twice.", "instructionVi": "Di chuyển đến nơi an toàn — sét có thể đánh vào cùng chỗ hai lần.", "isWarning": true },
+      { "stepNumber": 2, "instruction": "It is safe to touch the victim — they carry no electrical charge.", "instructionVi": "An toàn khi chạm vào nạn nhân — họ không mang điện.", "isWarning": false },
+      { "stepNumber": 3, "instruction": "Check breathing and pulse. Begin CPR if absent.", "instructionVi": "Kiểm tra hơi thở và mạch. Bắt đầu CPR nếu không có.", "isWarning": true },
+      { "stepNumber": 4, "instruction": "Treat burns at entry and exit points with cool water.", "instructionVi": "Điều trị bỏng tại điểm vào và ra của sét bằng nước mát.", "isWarning": false },
+      { "stepNumber": 5, "instruction": "Watch for delayed cardiac arrest — monitor for at least 24 hours.", "instructionVi": "Theo dõi ngừng tim muộn — theo dõi ít nhất 24 giờ.", "isWarning": true }
+    ],
+    "doNots": ["Do not shelter under tall trees", "Do not stand in open ground during storm"],
+    "doNotsVi": ["Không trú dưới cây cao", "Không đứng ngoài trời trống khi bão"],
+    "whenToEvacuate": "All lightning strike victims require hospital evaluation",
+    "whenToEvacuateVi": "Mọi nạn nhân bị sét đánh cần đánh giá tại bệnh viện"
+  },
+  {
+    "id": "eye-injury-001",
+    "conditionName": "Eye Injury (Foreign Object / Chemical)",
+    "conditionNameVi": "Chấn Thương Mắt (Dị Vật / Hóa Chất)",
+    "severity": "warning",
+    "description": "Eye injuries from debris, insects, or chemical splash require gentle irrigation.",
+    "descriptionVi": "Chấn thương mắt do mảnh vỡ, côn trùng hoặc hóa chất cần rửa nhẹ nhàng.",
+    "tags": ["eye", "injury", "foreign object", "mắt", "dị vật", "đau mắt", "hóa chất", "sạn mắt", "cát mắt"],
+    "steps": [
+      { "stepNumber": 1, "instruction": "Do not rub the eye — it can scratch the cornea or push the object deeper.", "instructionVi": "Không dụi mắt — có thể gây xước giác mạc hoặc đẩy vật sâu hơn.", "isWarning": true },
+      { "stepNumber": 2, "instruction": "Rinse gently with clean water for 15–20 minutes.", "instructionVi": "Rửa nhẹ bằng nước sạch trong 15–20 phút.", "isWarning": false },
+      { "stepNumber": 3, "instruction": "If a large object is embedded, cover both eyes and evacuate.", "instructionVi": "Nếu có vật lớn đâm vào, băng cả hai mắt và di tản.", "isWarning": true },
+      { "stepNumber": 4, "instruction": "For chemical exposure, flush continuously with water for at least 20 minutes.", "instructionVi": "Với hóa chất, rửa liên tục bằng nước ít nhất 20 phút.", "isWarning": false }
+    ],
+    "doNots": ["Do not try to remove embedded objects", "Do not use eye drops without medical advice"],
+    "doNotsVi": ["Không cố lấy vật đâm sâu vào mắt", "Không tự dùng thuốc nhỏ mắt"],
+    "whenToEvacuate": "Persistent pain, vision changes, chemical exposure, or embedded objects",
+    "whenToEvacuateVi": "Đau dai dẳng, thay đổi thị lực, tiếp xúc hóa chất hoặc có vật đâm vào"
+  },
+  {
+    "id": "heat-stroke-001",
+    "conditionName": "Heat Stroke",
+    "conditionNameVi": "Sốc Nhiệt (Nặng)",
+    "severity": "danger",
+    "description": "Heat stroke is a medical emergency — body temperature above 40°C with altered mental state.",
+    "descriptionVi": "Sốc nhiệt là cấp cứu y tế — thân nhiệt trên 40°C kèm thay đổi ý thức.",
+    "tags": ["heat stroke", "sốc nhiệt", "nóng", "mất ý thức", "lú lẫn", "co giật", "da nóng", "nhiệt độ cao"],
+    "steps": [
+      { "stepNumber": 1, "instruction": "Call for emergency evacuation immediately.", "instructionVi": "Gọi cấp cứu ngay lập tức.", "isWarning": true },
+      { "stepNumber": 2, "instruction": "Move to cool shade and remove all clothing except underwear.", "instructionVi": "Chuyển đến bóng mát và cởi bỏ quần áo trừ đồ lót.", "isWarning": false },
+      { "stepNumber": 3, "instruction": "Spray or sponge victim with cool water and fan aggressively.", "instructionVi": "Phun hoặc lau người bằng nước mát và quạt mạnh.", "isWarning": false },
+      { "stepNumber": 4, "instruction": "Pack ice or cold wet cloths to neck, armpits, and groin.", "instructionVi": "Chườm đá hoặc khăn lạnh lên cổ, nách và bẹn.", "isWarning": false },
+      { "stepNumber": 5, "instruction": "If victim is conscious, give cool water to sip slowly.", "instructionVi": "Nếu tỉnh, cho uống nước mát từng ngụm nhỏ.", "isWarning": false }
+    ],
+    "doNots": ["Do not give medications", "Do not leave victim alone"],
+    "doNotsVi": ["Không tự ý cho dùng thuốc", "Không để nạn nhân một mình"],
+    "whenToEvacuate": "All heat stroke victims require emergency hospital treatment",
+    "whenToEvacuateVi": "Mọi trường hợp sốc nhiệt cần điều trị cấp cứu tại bệnh viện"
   }
 ]

@@ -4,6 +4,8 @@ import 'package:supabase_flutter/supabase_flutter.dart' hide AuthState;
 
 import 'auth_bloc.dart';
 
+typedef AuthBloc = AuthBlocHandler;
+
 @injectable
 class AuthBlocHandler extends Bloc<AuthEvent, AuthState> {
   final SupabaseClient _supabase;
