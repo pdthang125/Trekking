@@ -1,0 +1,1126 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<title>Báo Cáo Tổng Kết Đồ Án Chuyên Ngành - TrekGuard AI</title>
+<!--[if gte mso 9]>
+<xml>
+<w:WordDocument>
+<w:View>Print</w:View>
+<w:Zoom>100</w:Zoom>
+<w:DoNotOptimizeForBrowser/>
+</w:WordDocument>
+</xml>
+<![endif]-->
+<style>
+@page Section1 {
+    size: 21.0cm 29.7cm; /* Khổ giấy A4 chuẩn */
+    margin: 2.0cm 2.0cm 2.0cm 2.5cm; /* Trên: 2cm, Phải: 2cm, Dưới: 2cm, Trái: 2.5cm */
+    mso-header-margin: 1.0cm;
+    mso-footer-margin: 1.0cm;
+    mso-paper-source: 0;
+}
+div.Section1 {
+    page: Section1;
+}
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 13.0pt;
+    line-height: 1.35;
+    color: #000000;
+}
+p {
+    margin-top: 4pt;
+    margin-bottom: 6pt;
+    text-align: justify;
+    color: #000000;
+}
+
+/* Khung viền trang bìa */
+.cover-table {
+    width: 100%;
+    height: 25.5cm;
+    border: 2.5pt double #000000;
+    padding: 20pt 16pt;
+    box-sizing: border-box;
+    text-align: center;
+}
+.cover-uni {
+    font-size: 12.0pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 4pt;
+}
+.cover-faculty {
+    font-size: 12.0pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 6pt;
+}
+.cover-divider {
+    width: 35%;
+    border-top: 1.0pt solid #000000;
+    margin: 4pt auto 16pt auto;
+}
+.cover-title {
+    font-size: 16.0pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.3;
+    margin-top: 14pt;
+    margin-bottom: 12pt;
+}
+.cover-project {
+    font-size: 13.5pt;
+    font-weight: bold;
+    line-height: 1.35;
+    margin-bottom: 6pt;
+}
+.cover-project-en {
+    font-size: 11.5pt;
+    font-style: italic;
+    margin-bottom: 25pt;
+}
+.cover-meta {
+    width: 90%;
+    margin: 10pt auto 0 auto;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 12.5pt;
+}
+.cover-meta td {
+    padding: 4pt 6pt;
+    vertical-align: top;
+}
+.cover-bottom {
+    font-size: 12.0pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 30pt;
+}
+
+/* Mục lục */
+.toc-title {
+    font-size: 15.0pt;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 10pt;
+    margin-bottom: 14pt;
+}
+.toc-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11.5pt;
+    line-height: 1.35;
+}
+.toc-table td {
+    padding: 2.5pt 0;
+    vertical-align: bottom;
+}
+.toc-head {
+    font-weight: bold;
+}
+.toc-dots {
+    border-bottom: 1.0pt dotted #000000;
+    width: 100%;
+    display: inline-block;
+    height: 1.0pt;
+    margin-bottom: 3pt;
+}
+.toc-num {
+    text-align: right;
+    font-weight: bold;
+    width: 30pt;
+    white-space: nowrap;
+}
+
+/* Tiêu đề nội dung */
+h2 {
+    font-size: 13.5pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 14pt;
+    margin-bottom: 6pt;
+    border-bottom: 1.0pt solid #000000;
+    padding-bottom: 2pt;
+    page-break-after: avoid;
+}
+h3 {
+    font-size: 13.0pt;
+    font-weight: bold;
+    margin-top: 12pt;
+    margin-bottom: 4pt;
+    page-break-after: avoid;
+}
+h4 {
+    font-size: 13.0pt;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 8pt;
+    margin-bottom: 3pt;
+}
+
+/* Bảng biểu */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 6pt;
+    margin-bottom: 10pt;
+    font-size: 11.0pt;
+}
+.data-table th, .data-table td {
+    border: 1.0pt solid #000000;
+    padding: 4.5pt 5.5pt;
+    text-align: left;
+}
+.data-table th {
+    font-weight: bold;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+.data-table td.center {
+    text-align: center;
+}
+.code-box {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10.0pt;
+    background-color: #f9f9f9;
+    border: 1.0pt solid #333333;
+    padding: 6pt 8pt;
+    margin: 6pt 0 8pt 0;
+    line-height: 1.2;
+}
+.diagram-box {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 9.5pt;
+    background-color: #fafafa;
+    border: 1.0pt solid #000000;
+    padding: 8pt 10pt;
+    margin: 8pt 0;
+    line-height: 1.15;
+    white-space: pre;
+}
+ul, ol {
+    margin-top: 3pt;
+    margin-bottom: 5pt;
+    padding-left: 20pt;
+}
+li {
+    margin-bottom: 2.5pt;
+    text-align: justify;
+}
+.signature-table {
+    width: 100%;
+    margin-top: 30pt;
+    border-collapse: collapse;
+    page-break-inside: avoid;
+}
+.signature-table td {
+    width: 50%;
+    text-align: center;
+    vertical-align: top;
+    font-size: 12.5pt;
+}
+.signature-space {
+    height: 70pt;
+}
+</style>
+</head>
+<body>
+<div class="Section1">
+
+<!-- ═════════════════════════════════════════════════════════════════════ -->
+<!-- TRANG 1: TRANG BÌA CHÍNH THỨC CỦA ĐỒ ÁN (ĐÓNG KHUNG VIỀN ĐÔI TOÀN BỘ) -->
+<!-- ═════════════════════════════════════════════════════════════════════ -->
+<table class="cover-table">
+    <tr>
+        <td style="vertical-align: top;">
+            <div class="cover-uni">BỘ GIÁO DỤC VÀ ĐÀO TẠO — ĐẠI HỌC ĐÀ NẴNG</div>
+            <div class="cover-faculty">TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN VÀ TRUYỀN THÔNG VIỆT - HÀN<br>KHOA KHOA HỌC MÁY TÍNH</div>
+            <div class="cover-divider"></div>
+
+            <p style="font-size: 11pt; font-weight: bold; margin: 12pt 0 4pt 0;">[REPORT TEMPLATE 4] FINAL CAPSTONE REPORT &amp; DEFENSE DOSSIER</p>
+
+            <div class="cover-title">
+                BÁO CÁO TỔNG KẾT ĐỒ ÁN VÀ HỒ SƠ BẢO VỆ CHUYÊN NGÀNH
+            </div>
+
+            <div class="cover-project">
+                ĐỀ TÀI: TREKGUARD AI — HỆ THỐNG HỖ TRỢ TREKKING TÍCH HỢP AI ON-DEVICE SƠ CỨU KHẨN CẤP VÀ ĐỊNH VỊ BẢN ĐỒ NGOẠI TUYẾN
+            </div>
+
+            <div class="cover-project-en">
+                (Cross-Platform Mobile Application for Trekking Support, Offline First-Aid and Navigation)
+            </div>
+
+            <table class="cover-meta">
+                <tr>
+                    <td style="width: 32%; font-weight: bold;">Học phần:</td>
+                    <td>Phát triển ứng dụng di động đa nền tảng</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;">Mã học phần:</td>
+                    <td>CMP3063 (Cross-Platform Mobile App Development)</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;">Giảng viên hướng dẫn:</td>
+                    <td><b>TS. Nguyễn Thanh Tuấn</b></td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;">Nhóm sinh viên thực hiện:</td>
+                    <td><b>TrekGuard Team</b> (Cột mốc: Tuần 13 - Final Capstone Defense)</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;">Danh sách thành viên:</td>
+                    <td>
+                        1. <b>Phan Đình Thắng</b> (Trưởng nhóm) — Mobile Architect &amp; Core Engine<br>
+                        2. <b>Lê Quốc Trí</b> — AI &amp; Cloud Backend Specialist<br>
+                        3. <b>Phạm Ngọc Long</b> — UI/UX &amp; Maps Engineer
+                    </td>
+                </tr>
+            </table>
+
+            <div class="cover-bottom">
+                ĐÀ NẴNG, NĂM HỌC 2026 - 2027
+            </div>
+        </td>
+    </tr>
+</table>
+
+<!-- LỆNH NGẮT TRANG BẮT BUỘC TRONG MICROSOFT WORD CHO TRANG BÌA -->
+<br clear="all" style="page-break-before:always; mso-break-type:section-break">
+
+<!-- ═════════════════════════════════════════════════════════════════════ -->
+<!-- TRANG 2: TRANG MỤC LỤC RIÊNG BIỆT (ĐỨNG ĐỘC LẬP HOÀN TOÀN TRÊN TRANG 2) -->
+<!-- ═════════════════════════════════════════════════════════════════════ -->
+<div class="toc-title">MỤC LỤC TỔNG THỂ BÁO CÁO (TABLE OF CONTENTS)</div>
+
+<table class="toc-table">
+    <tr class="toc-head">
+        <td style="width: 82%;">CHƯƠNG 1: GIỚI THIỆU TỔNG QUAN VÀ KHÔNG GIAN BÀI TOÁN</td>
+        <td style="width: 10%;"><span class="toc-dots"></span></td>
+        <td class="toc-num">Trang 03</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">1.1. Bối cảnh và Thực trạng phong trào Trekking tại Việt Nam</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">03</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">1.2. Thách thức sinh tồn khi mất sóng di động ngoài thiên nhiên</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">04</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">1.3. Khảo sát và Đánh giá so sánh các giải pháp hiện hữu</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">05</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">1.4. Tuyên bố bài toán và Mục tiêu nghiên cứu (SMART Objectives)</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">06</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">1.5. Đối tượng thụ hưởng và Phạm vi nghiên cứu của đề tài</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">07</td>
+    </tr>
+
+    <tr class="toc-head">
+        <td style="padding-top: 6pt;">CHƯƠNG 2: PHÂN TÍCH YÊU CẦU VÀ THIẾT KẾ TRẢI NGHIỆM NGƯỜI DÙNG</td>
+        <td style="padding-top: 6pt;"><span class="toc-dots"></span></td>
+        <td class="toc-num" style="padding-top: 6pt;">Trang 08</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">2.1. Phân tích Tác nhân và Chân dung người dùng (User Personas)</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">08</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">2.2. Bảng phân tích Yêu cầu chức năng chi tiết (MoSCoW Prioritization)</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">09</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">2.3. Bảng yêu cầu phi chức năng chuẩn quốc tế ISO/IEC 25010</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">11</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">2.4. Đặc tả Ca sử dụng trọng yếu (Core Use Case Specifications)</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">12</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">2.5. Hệ thống Thiết kế Material 3 High Contrast Outdoor Design System</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">13</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">2.6. Thiết kế chi tiết giao diện 5 màn hình chính trên Figma</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">14</td>
+    </tr>
+
+    <tr class="toc-head">
+        <td style="padding-top: 6pt;">CHƯƠNG 3: THIẾT KẾ HỆ THỐNG VÀ KIẾN TRÚC MÃ NGUỒN CHUẨN MỰC</td>
+        <td style="padding-top: 6pt;"><span class="toc-dots"></span></td>
+        <td class="toc-num" style="padding-top: 6pt;">Trang 15</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">3.1. Sơ đồ kiến trúc tổng thể hệ thống (System Architecture)</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">15</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">3.2. Hiện thực hóa Clean Architecture 3 lớp và Nguyên lý SOLID</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">16</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">3.3. Quản lý trạng thái đa luồng với BLoC State Management</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">17</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">3.4. Thiết kế Cơ sở dữ liệu cục bộ Drift SQLite trên Background Isolate</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">18</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">3.5. Thiết kế Cơ sở dữ liệu đám mây Supabase PostgreSQL và PostGIS v2</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">20</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">3.6. Chính sách bảo mật dữ liệu Row-Level Security (RLS) và Mã hóa</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">21</td>
+    </tr>
+
+    <tr class="toc-head">
+        <td style="padding-top: 6pt;">CHƯƠNG 4: NĂNG LỰC NÂNG CAO VÀ TÍCH HỢP TRÍ TUỆ NHÂN TẠO</td>
+        <td style="padding-top: 6pt;"><span class="toc-dots"></span></td>
+        <td class="toc-num" style="padding-top: 6pt;">Trang 22</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">4.1. Đường ống Huấn luyện và Lượng tử hóa mô hình TFLite INT8</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">22</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">4.2. Bộ tách từ tiếng Việt độc lập bằng mã Dart thuần (TfliteTokenizer)</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">23</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">4.3. Động cơ điều phối trợ lý lai Hybrid AI Routing (Cloud &harr; Local)</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">24</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">4.4. Động cơ Bản đồ ngoại tuyến và La bàn cảm biến từ trường</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">25</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">4.5. Phân hệ Cứu nạn phần cứng tích hợp (SOS Morse, Còi hú, CPR Metronome)</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">26</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">4.6. Hàng đợi đồng bộ ưu tiên khẩn cấp và Giải quyết xung đột LWW</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">27</td>
+    </tr>
+
+    <tr class="toc-head">
+        <td style="padding-top: 6pt;">CHƯƠNG 5: HỆ THỐNG KIỂM THỬ, ĐO LƯỜNG VÀ ĐÁNH GIÁ THỰC TẾ</td>
+        <td style="padding-top: 6pt;"><span class="toc-dots"></span></td>
+        <td class="toc-num" style="padding-top: 6pt;">Trang 28</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">5.1. Chiến lược Kiểm thử tự động đa tầng và Ma trận kiểm thử 88 test cases</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">28</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">5.2. Đo lường Hiệu năng thực tế trên thiết bị phần cứng (Performance Profiling)</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">30</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">5.3. Nghiệm thu thực địa trong chế độ ngắt sóng hoàn toàn (Airplane Mode)</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">31</td>
+    </tr>
+
+    <tr class="toc-head">
+        <td style="padding-top: 6pt;">CHƯƠNG 6: KẾT LUẬN, BÀI HỌC KINH NGHIỆM VÀ HƯỚNG PHÁT TRIỂN</td>
+        <td style="padding-top: 6pt;"><span class="toc-dots"></span></td>
+        <td class="toc-num" style="padding-top: 6pt;">Trang 32</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">6.1. Tổng kết kết quả đạt được đối chiếu mục tiêu nghiên cứu ban đầu</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">32</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">6.2. Bài học kinh nghiệm trong kỹ nghệ phát triển ứng dụng di động chuyên sâu</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">33</td>
+    </tr>
+    <tr>
+        <td style="padding-left: 12pt;">6.3. Định hướng nghiên cứu mở rộng (LoRa Mesh Network &amp; Computer Vision)</td>
+        <td><span class="toc-dots"></span></td>
+        <td class="toc-num">34</td>
+    </tr>
+
+    <tr class="toc-head" style="padding-top: 8pt;">
+        <td style="padding-top: 6pt;">HỒ SƠ BÀN GIAO VÀ NGHIỆM THU ĐỒ ÁN PHỤC VỤ HỘI ĐỒNG (DELIVERABLES)</td>
+        <td style="padding-top: 6pt;"><span class="toc-dots"></span></td>
+        <td class="toc-num" style="padding-top: 6pt;">Trang 35</td>
+    </tr>
+</table>
+
+<!-- LỆNH NGẮT TRANG BẮT BUỘC SAU TRANG MỤC LỤC -->
+<br clear="all" style="page-break-before:always; mso-break-type:section-break">
+
+<!-- ═════════════════════════════════════════════════════════════════════ -->
+<!-- PHẦN NỘI DUNG CHÍNH: BẮT ĐẦU TỪ TRANG 03 (CHƯƠNG 1) -->
+<!-- ═════════════════════════════════════════════════════════════════════ -->
+
+<h2>CHƯƠNG 1: GIỚI THIỆU TỔNG QUAN VÀ KHÔNG GIAN BÀI TOÁN</h2>
+
+<h3>1.1. Bối cảnh và Thực trạng phong trào Trekking tại Việt Nam</h3>
+<p>
+Trong những năm gần đây, phong trào leo núi dã ngoại (trekking), đi bộ đường dài (hiking) và thám hiểm thiên nhiên hoang dã đã chứng kiến sự bùng nổ mạnh mẽ trong giới trẻ cũng như cộng đồng người đam mê thể thao mạo hiểm tại Việt Nam. Các cung đường nổi tiếng như Tà Năng - Phan Dũng (Lâm Đồng - Bình Thuận), Vườn quốc gia Bidoup - Núi Bà, Đỉnh Fansipan (Lào Cai), Đỉnh Bạch Mộc Lương Tử (Kỳ Quan San), Bán đảo Sơn Trà (Đà Nẵng), hay Mẫu Sơn (Lạng Sơn) thu hút hàng chục nghìn lượt người khám phá mỗi năm. Sự phát triển này thúc đẩy mạnh mẽ du lịch sinh thái và tinh thần rèn luyện thể chất, nhưng đồng thời cũng đặt ra những rủi ro cực kỳ nghiêm trọng về an toàn tính mạng con người.
+</p>
+<p>
+Theo các số liệu thống kê không chính thức từ các lực lượng cứu nạn địa phương và ban quản lý các vườn quốc gia, mỗi năm xảy ra hàng chục vụ việc người đi rừng bị lạc đường, mất liên lạc dài ngày, kiệt sức do mất nước, gặp tai nạn chấn thương gãy xương, hoặc bị rắn độc cắn. Điển hình như các sự cố lạc rừng thương tâm kéo dài nhiều ngày tại Tà Năng - Phan Dũng năm 2018 và 2020 đã dấy lên hồi chuông cảnh báo lớn về việc thiếu hụt các công cụ định vị và hỗ trợ sinh tồn độc lập.
+</p>
+<p>
+Đặc thù địa hình rừng nhiệt đới tại Việt Nam có những đặc điểm hiểm trở mang tính sát thương cao:
+</p>
+<ul>
+    <li><b>Địa hình chia cắt phức tạp:</b> Các hẻm vực sâu, dốc trơn trượt có độ dốc từ 35 đến 60 độ, nhiều đoạn phải băng qua các gềnh đá trơn ướt và suối sâu tiềm ẩn lũ quét bất ngờ khi thượng nguồn có mưa to.</li>
+    <li><b>Hệ sinh thái đa dạng nhưng nhiều độc tính:</b> Là nơi cư ngụ của nhiều loài rắn độc cực kỳ nguy hiểm (rắn lục đuôi đỏ, rắn hổ mang chúa, rắn cạp nong, cạp nia), các loài côn trùng đốt buốt (ong rừng, vắt, bọ cạp) và các loài nấm độc, thực vật chứa độc tố gây bỏng da hoặc tê liệt thần kinh.</li>
+    <li><b>Khí hậu biến đổi cực đoan:</b> Ban ngày nhiệt độ có thể lên tới 38°C kèm độ ẩm trên 85% gây sốc nhiệt và mất nước nghiêm trọng; trong khi ban đêm nhiệt độ tại các đỉnh núi cao hạ nhanh xuống dưới 5°C kèm sương mù dày đặc dẫn đến nguy cơ hạ thân nhiệt cấp (Hypothermia).</li>
+</ul>
+
+<h3>1.2. Thách thức sinh tồn khi mất sóng di động ngoài thiên nhiên</h3>
+<p>
+Khảo sát thực địa và phân tích nguyên nhân các vụ tai nạn dã ngoại cho thấy khi thâm nhập sâu vào các khu bảo tồn thiên nhiên, người leo núi phải đối mặt với ba rào cản chí mạng:
+</p>
+<ul>
+    <li><b>Rào cản 1: Mất hoàn toàn kết nối viễn thông (Zero Connectivity Barrier).</b> Sóng vô tuyến di động từ các trạm BTS mặt đất (2G/3G/4G/5G) bị suy hao mạnh do hiện tượng tán xạ và hấp thụ bởi thảm thực vật rừng rậm rạp, đồng thời bị che chắn tuyệt đối bởi các vách núi và thung lũng sâu. Khi đó, các ứng dụng dẫn đường phổ thông phụ thuộc trực tuyến như Google Maps hoặc Apple Maps trở nên tê liệt: không thể định tuyến cung đường, không tải được bản đồ số nếu chưa lưu bộ đệm trước, và không thể thực hiện bất kỳ cuộc gọi hay tin nhắn cấp cứu nào tới số điện thoại khẩn cấp 112 hoặc 115.</li>
+    <li><b>Rào cản 2: Thiếu hụt kỹ năng sơ cứu chuẩn mực trong “thời gian vàng” (First-Aid Knowledge Gap).</b> Các chấn thương dã ngoại đòi hỏi phải được can thiệp y tế đúng quy chuẩn ngay trong khoảng 10 đến 30 phút đầu tiên (thời gian vàng để bảo toàn tính mạng). Tuy nhiên, phần lớn người đi trekking thiếu kiến thức y tế thực tế, thường hoảng loạn và xử trí sai lầm theo kinh nghiệm dân gian cực kỳ tai hại: rạch vết cắn của rắn độc để hút nọc làm tăng nguy cơ nhiễm trùng máu, buộc ga-rô quá chặt và quá lâu gây hoại tử phải cưa cụt chi, nắn bóp dầu nóng khi bị bong gân hoặc gãy xương kín làm dập rách mạch máu, hoặc cho nạn nhân hạ thân nhiệt uống rượu mạnh khiến mạch máu ngoại vi giãn ra làm nhiệt độ cơ thể tụt nhanh hơn.</li>
+    <li><b>Rào cản 3: Trạng thái hoảng loạn và khó khăn trong truyền đạt tọa độ cứu hộ (Panic &amp; Coordinate Failure).</b> Khi gặp nạn hoặc bị lạc giữa đêm tối, áp lực sinh tồn làm nạn nhân mất phương hướng hoàn toàn. Ngay cả khi tìm được một điểm có sóng chập chờn để gửi tin nhắn ngắn, nạn nhân cũng không biết cách đọc chính xác vĩ độ/kinh độ GPS dạng thập phân (Decimal Degrees) để chuyển cho đội cứu hộ. Đồng thời, smartphone thông thường thiếu các công cụ chuyên dụng phát tín hiệu âm thanh và ánh sáng cường độ cao để dẫn đường cho lực lượng cứu nạn tiếp cận trong bán kính vài trăm mét.</li>
+</ul>
+
+<h3>1.3. Khảo sát và Đánh giá so sánh các giải pháp hiện hữu</h3>
+<p>
+Nhóm nghiên cứu đã tiến hành khảo sát và đánh giá so sánh toàn diện giữa TrekGuard AI với các giải pháp phần mềm và thiết bị hỗ trợ dã ngoại phổ biến trên thị trường hiện nay:
+</p>
+
+<table class="data-table">
+    <thead>
+        <tr>
+            <th>Tiêu chí so sánh</th>
+            <th>TrekGuard AI (Đề tài)</th>
+            <th>AllTrails Pro</th>
+            <th>Gaia GPS</th>
+            <th>Thiết bị Zoleo / Garmin InReach</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><b>Khả năng chạy Ngoại tuyến</b></td>
+            <td class="center">100% Offline-First</td>
+            <td class="center">Offline giới hạn</td>
+            <td class="center">Offline tốt</td>
+            <td class="center">Hoàn toàn độc lập</td>
+        </tr>
+        <tr>
+            <td><b>Trí tuệ nhân tạo Sơ cứu</b></td>
+            <td class="center"><b>TFLite On-Device + Gemini</b></td>
+            <td class="center">Không hỗ trợ</td>
+            <td class="center">Không hỗ trợ</td>
+            <td class="center">Không hỗ trợ</td>
+        </tr>
+        <tr>
+            <td><b>Cẩm nang Y tế Dã ngoại</b></td>
+            <td class="center">16 Ca chuẩn AHA/Chữ thập đỏ</td>
+            <td class="center">Không có</td>
+            <td class="center">Không có</td>
+            <td class="center">Không có</td>
+        </tr>
+        <tr>
+            <td><b>Công cụ Cứu hộ Phần cứng</b></td>
+            <td class="center">SOS Flash Morse, Còi, CPR</td>
+            <td class="center">Chỉ theo dõi vị trí</td>
+            <td class="center">Chỉ theo dõi vị trí</td>
+            <td class="center">Nút SOS vệ tinh</td>
+        </tr>
+        <tr>
+            <td><b>Hỗ trợ Tiếng Việt &amp; Bản địa</b></td>
+            <td class="center"><b>100% Tiếng Việt tự nhiên</b></td>
+            <td class="center">Tiếng Anh</td>
+            <td class="center">Tiếng Anh</td>
+            <td class="center">Tiếng Anh</td>
+        </tr>
+        <tr>
+            <td><b>Chi phí người dùng</b></td>
+            <td class="center"><b>Miễn phí / Mã nguồn mở</b></td>
+            <td class="center">35.99 USD / năm</td>
+            <td class="center">39.99 USD / năm</td>
+            <td class="center">300 - 500 USD + Phí vệ tinh</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>
+Từ bảng so sánh trên, có thể thấy <b>TrekGuard AI</b> là giải pháp đầu tiên kết hợp hoàn hảo giữa <b>Định vị bản đồ số ngoại tuyến</b>, <b>Trí tuệ nhân tạo hỗ trợ y tế khẩn cấp On-Device</b> và <b>Trung tâm cứu nạn phần cứng</b>, được bản địa hóa hoàn toàn cho người leo núi Việt Nam mà không đòi hỏi chi phí đầu tư thiết bị phần cứng đắt đỏ.
+</p>
+
+<h3>1.4. Tuyên bố bài toán và Mục tiêu nghiên cứu (SMART Objectives)</h3>
+<p>
+<b>Tuyên bố bài toán:</b> <i>Làm thế nào để xây dựng một ứng dụng di động đa nền tảng có khả năng vận hành độc lập hoàn toàn trong môi trường ngắt kết nối viễn thông (100% Offline), tích hợp trí tuệ nhân tạo nhúng biên để chẩn đoán sơ cứu chính xác dưới 100ms, hỗ trợ bản đồ địa hình định vị GPS tiết kiệm pin và chuyển hóa smartphone thành trung tâm phát tín hiệu cứu hộ khẩn cấp?</i>
+</p>
+<p>
+Để giải quyết bài toán trên, nhóm đề ra 5 mục tiêu nghiên cứu cụ thể theo tiêu chuẩn SMART:
+</p>
+<ol>
+    <li><b>Mục tiêu 1 (Kiến trúc phần mềm):</b> Xây dựng ứng dụng Flutter 3.24 tuân thủ nghiêm ngặt mô hình Clean Architecture 3 lớp, bảo đảm 100% tính năng lõi (Bản đồ, Sơ cứu, SOS, AI Offline) hoạt động trong chế độ máy bay (Airplane Mode).</li>
+    <li><b>Mục tiêu 2 (Trí tuệ nhân tạo biên):</b> Huấn luyện và lượng tử hóa mô hình TFLite INT8 đạt kích thước dưới 15 MB, độ trễ suy luận dưới 150 ms và độ chính xác phân loại triệu chứng Top-1 đạt trên 85% đối với 16 ca cấp cứu dã ngoại.</li>
+    <li><b>Mục tiêu 3 (Bản đồ &amp; Quản trị năng lượng):</b> Hiện thực hóa động cơ bản đồ OpenStreetMap với bộ nhớ đệm gạch ngói LRU 500 MB; tích hợp thuật toán lọc khoảng cách GPS (Distance Filter 10m) giúp tiết kiệm trên 40% pin khi ghi hành trình.</li>
+    <li><b>Mục tiêu 4 (Trung tâm sinh tồn phần cứng):</b> Tích hợp nhịp nhàng các cảm biến vật lý trên thiết bị: kích hoạt SOS an toàn chống bấm nhầm 3 giây, đèn Flash nhấp nháy mã Morse, còi hú cứu nạn và máy đếm nhịp hồi sức tim phổi CPR chuẩn AHA 110 BPM.</li>
+    <li><b>Mục tiêu 5 (Đồng bộ đám mây an toàn):</b> Thiết lập cơ sở dữ liệu Supabase PostgreSQL với PostGIS v2, cơ chế hàng đợi ưu tiên khẩn cấp và chính sách bảo mật Row-Level Security (RLS) bảo vệ tuyệt đối dữ liệu cá nhân.</li>
+</ol>
+
+<h3>1.5. Đối tượng thụ hưởng và Phạm vi nghiên cứu của đề tài</h3>
+<ul>
+    <li><b>Đối tượng thụ hưởng trực tiếp:</b> Người đi leo núi mạo hiểm tự do, các nhóm phượt dã ngoại, hướng dẫn viên du lịch sinh thái (tour guides), lực lượng kiểm lâm tuần tra rừng phòng hộ và các câu lạc bộ thể thao ngoài trời.</li>
+    <li><b>Đối tượng thụ hưởng gián tiếp:</b> Các đội tìm kiếm cứu nạn chuyên nghiệp (112, 115, Công an PCCC &amp; CNCH), gia đình của người đi rừng và cộng đồng du lịch dã ngoại tại Việt Nam.</li>
+    <li><b>Phạm vi nghiên cứu:</b> Tập trung vào nền tảng Android (hỗ trợ từ Android 8.0 / API 26 trở lên) và kiến trúc sẵn sàng cho iOS; dữ liệu bản đồ khu vực lãnh thổ Việt Nam; bộ cẩm nang sơ cứu tập trung vào 16 bệnh lý thường gặp trong môi trường dã ngoại nhiệt đới.</li>
+</ul>
+
+<!-- LỆNH NGẮT TRANG BẮT BUỘC SANG CHƯƠNG 2 -->
+<br clear="all" style="page-break-before:always; mso-break-type:section-break">
+
+<h2>CHƯƠNG 2: PHÂN TÍCH YÊU CẦU VÀ THIẾT KẾ TRẢI NGHIỆM NGƯỜI DÙNG</h2>
+
+<h3>2.1. Phân tích Tác nhân và Chân dung người dùng (User Personas)</h3>
+<p>
+Nhóm phát triển đã xây dựng 3 chân dung người dùng đại diện để định hình trải nghiệm ứng dụng:
+</p>
+<ul>
+    <li><b>Persona 1: Anh Trần Minh Hoàng (26 tuổi) — Solo Trekker tự do.</b> Thường xuyên đi trekking một mình vào dịp cuối tuần tại các cung đường hiểm trở. Mối bận tâm lớn nhất là nguy cơ bị lạc lối khi mất dấu mòn hoặc bị thương bất ngờ khi không có bạn đồng hành. Nhu cầu cốt lõi: Ứng dụng phải định vị chính xác khi mất sóng, bản đồ xoay theo hướng nhìn la bàn, và nút SOS phát tín hiệu cực mạnh khi gặp sự cố.</li>
+    <li><b>Persona 2: Chị Nguyễn Lê Thảo (31 tuổi) — Hướng dẫn viên Tour Trekking sinh thái.</b> Chịu trách nhiệm an toàn cho đoàn từ 10 đến 15 khách. Mối bận tâm lớn nhất là thành viên trong đoàn bị sốc nhiệt, trẹo chân hoặc côn trùng cắn. Nhu cầu cốt lõi: Cần tra cứu nhanh phác đồ sơ cứu chuẩn xác từng bước, danh sách điều cấm kỵ để chỉ đạo sơ cứu tại chỗ, và máy đếm nhịp CPR hướng dẫn ép tim khi có người bất tỉnh.</li>
+    <li><b>Persona 3: Anh Lê Văn Hùng (42 tuổi) — Cán bộ Kiểm lâm tuần tra rừng.</b> Thường xuyên tuần tra dài ngày trong rừng sâu. Nhu cầu cốt lõi: Cần lưu vết tọa độ tuần tra với mức tiêu thụ pin thấp nhất để sử dụng bền bỉ suốt 2 đến 3 ngày, đồng thời đánh dấu các mốc sinh tồn (nguồn nước sạch, điểm sạt lở) để đồng bộ về trạm khi có sóng.</li>
+</ul>
+
+<h3>2.2. Bảng phân tích Yêu cầu chức năng chi tiết (MoSCoW Prioritization)</h3>
+<p>
+Các yêu cầu chức năng được phân loại theo mức độ ưu tiên kỹ thuật nghiêm ngặt:
+</p>
+
+<table class="data-table">
+    <thead>
+        <tr>
+            <th>Mã Yêu Cầu</th>
+            <th>Tên Chức Năng Nghiệp Vụ</th>
+            <th>Mô Tả Chi Tiết Kỹ Thuật</th>
+            <th>Mức Độ Ưu Tiên</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="center"><b>FR-01</b></td>
+            <td>Tra cứu Cẩm nang Sơ cứu Offline</td>
+            <td>Quản lý 16 nhóm bệnh lý dã ngoại; hiển thị các bước sơ cứu, danh sách cấm kỵ và tiêu chuẩn di tản khẩn cấp từ cơ sở dữ liệu Drift SQLite.</td>
+            <td class="center"><b>MUST HAVE</b></td>
+        </tr>
+        <tr>
+            <td class="center"><b>FR-02</b></td>
+            <td>Trí tuệ nhân tạo Phân loại Triệu chứng</td>
+            <td>Mô hình TFLite nhúng On-Device phân loại ý định từ câu mô tả tự nhiên tiếng Việt, trả lời dưới 100ms khi ngắt mạng 100%.</td>
+            <td class="center"><b>MUST HAVE</b></td>
+        </tr>
+        <tr>
+            <td class="center"><b>FR-03</b></td>
+            <td>Bản đồ Số và Định vị GPS Ngoại tuyến</td>
+            <td>Kết xuất bản đồ OpenStreetMap từ bộ nhớ đệm gạch ngói nội bộ, vẽ vệt hành trình GPS thời gian thực, tính quãng đường và vận tốc.</td>
+            <td class="center"><b>MUST HAVE</b></td>
+        </tr>
+        <tr>
+            <td class="center"><b>FR-04</b></td>
+            <td>Trung tâm Cứu nạn SOS Đa phương thức</td>
+            <td>Nút bấm an toàn giữ 3 giây, nhấp nháy đèn Flash theo mã Morse SOS, phát còi hú âm lượng tối đa, sao chép tọa độ GPS vào SMS.</td>
+            <td class="center"><b>MUST HAVE</b></td>
+        </tr>
+        <tr>
+            <td class="center"><b>FR-05</b></td>
+            <td>Máy đếm nhịp CPR Metronome 110 BPM</td>
+            <td>Đếm nhịp ép tim hồi sức tim phổi chuẩn AHA (110 nhịp/phút, chu kỳ 30 ép : 2 thổi) kèm âm thanh và xung rung Haptic.</td>
+            <td class="center"><b>MUST HAVE</b></td>
+        </tr>
+        <tr>
+            <td class="center"><b>FR-06</b></td>
+            <td>Trợ lý Sinh tồn Hybrid AI (Gemini)</td>
+            <td>Tự động điều hướng sang Google Gemini 1.5 Flash khi có mạng Internet để giải đáp câu hỏi sinh tồn chuyên sâu; fallback về TFLite khi mất sóng.</td>
+            <td class="center"><b>SHOULD HAVE</b></td>
+        </tr>
+        <tr>
+            <td class="center"><b>FR-07</b></td>
+            <td>Ghim Mốc Tọa độ Sinh tồn (Waypoints)</td>
+            <td>Cho phép người dùng đánh dấu nguồn nước, bãi cắm trại, điểm nguy hiểm lên bản đồ kèm ghi chú và cao độ GPS.</td>
+            <td class="center"><b>SHOULD HAVE</b></td>
+        </tr>
+        <tr>
+            <td class="center"><b>FR-08</b></td>
+            <td>Đồ thị Trắc diện Độ cao (Altitude Profile)</td>
+            <td>Vẽ biểu đồ cao độ tương tác bằng fl_chart, hiển thị tổng độ cao tích lũy, đỉnh cao nhất và độ dốc từng chặng.</td>
+            <td class="center"><b>SHOULD HAVE</b></td>
+        </tr>
+        <tr>
+            <td class="center"><b>FR-09</b></td>
+            <td>Nhập liệu và Đọc chỉ dẫn bằng Giọng nói</td>
+            <td>Hỗ trợ Speech-to-Text nhập triệu chứng rảnh tay và Text-to-Speech đọc to từng bước sơ cứu bằng tiếng Việt.</td>
+            <td class="center"><b>COULD HAVE</b></td>
+        </tr>
+        <tr>
+            <td class="center"><b>FR-10</b></td>
+            <td>Mạng lưới Cứu hộ Phân tán LoRa Mesh</td>
+            <td>Liên kết các thiết bị phát sóng tầm xa không cần Internet (định hướng giai đoạn tiếp theo).</td>
+            <td class="center">WON'T HAVE (Phase 2)</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>2.3. Bảng yêu cầu phi chức năng chuẩn quốc tế ISO/IEC 25010</h3>
+<p>
+Hệ thống thiết lập các chỉ số phi chức năng định lượng nhằm bảo đảm ứng dụng vận hành bền bỉ:
+</p>
+<ul>
+    <li><b>Tính khả dụng ngoài trời (Usability):</b> Giao diện đạt chuẩn tương phản cao WCAG 2.1 AAA (tỷ lệ tương phản tối thiểu 7:1 giữa chữ và nền). Vùng chạm tương tác tối thiểu 48x48 dp bảo đảm bấm chính xác khi đeo găng tay hoặc tay bị ướt.</li>
+    <li><b>Hiệu năng và Tốc độ đáp ứng (Performance):</b> Tốc độ khung hình giao diện duy trì từ 58 đến 60 FPS khi cuộn danh sách và lướt bản đồ. Thời gian suy luận mô hình AI nội bộ dưới 150 ms (kết quả thực tế 92.4 ms). Thời gian khởi động ứng dụng dưới 1.5 giây.</li>
+    <li><b>Độ tin cậy và Khả năng chịu lỗi (Reliability):</b> 100% tính năng cứu hộ cốt lõi (Bản đồ, Sơ cứu, SOS, AI Offline) hoạt động bình thường khi ngắt toàn bộ sóng mạng. Cơ sở dữ liệu Drift SQLite có cơ chế bảo vệ giao dịch (ACID Transactions) chống hỏng hóc tệp dữ liệu khi máy sập nguồn đột ngột.</li>
+    <li><b>Quản trị Năng lượng Pin (Efficiency):</b> Ứng dụng tiêu thụ dưới 4.5% dung lượng pin mỗi giờ khi bật tính năng ghi vết GPS ngầm, bảo đảm hoạt động liên tục trên 18 giờ sau một lần sạc đầy.</li>
+    <li><b>Bảo mật dữ liệu (Security):</b> Toàn bộ kết nối API lên Supabase được mã hóa qua TLS 1.3; thông tin xác thực lưu trong flutter_secure_storage (sử dụng Android KeyStore / iOS Keychain); dữ liệu đám mây bảo vệ qua chính sách Row-Level Security (RLS).</li>
+</ul>
+
+<h3>2.4. Đặc tả Ca sử dụng trọng yếu (Core Use Case Specifications)</h3>
+<h4>Đặc tả Use Case UC-01: Kích hoạt Cứu nạn Khẩn cấp SOS</h4>
+<ul>
+    <li><b>Tác nhân:</b> Người dùng gặp nạn trong rừng.</li>
+    <li><b>Điều kiện tiên quyết:</b> Điện thoại còn tối thiểu 3% pin; ứng dụng đang mở hoặc chạy ngầm.</li>
+    <li><b>Luồng sự kiện chính:</b>
+        <ol>
+            <li>Người dùng nhấn và giữ nút SOS tròn ở giữa màn hình.</li>
+            <li>Hệ thống kích hoạt vòng tròn đếm ngược đồ họa 3 giây kèm rung phản hồi nhịp tăng dần.</li>
+            <li>Sau 3 giây giữ liên tục, còi báo động công suất lớn vang lên; đèn Flash máy ảnh nhấp nháy theo mã Morse quốc tế SOS.</li>
+            <li>Hệ thống lấy tọa độ GPS chính xác nhất hiện có, đóng gói vào mẫu tin nhắn SMS cứu hộ chuẩn quốc tế.</li>
+            <li>Ghi nhận một bản ghi vào bảng SosEvents trong SQLite để sẵn sàng đồng bộ lên máy chủ cứu hộ.</li>
+        </ol>
+    </li>
+    <li><b>Luồng ngoại lệ:</b> Nếu người dùng thả tay ra trước khi hết 3 giây, tiến trình đếm ngược lập tức bị hủy bỏ, không phát tín hiệu báo động nhằm tránh kích hoạt nhầm.</li>
+</ul>
+
+<h3>2.5. Hệ thống Thiết kế Material 3 High Contrast Outdoor Design System</h3>
+<p>
+Nhóm phát triển đã xây dựng hệ thống thiết kế độc quyền tối ưu riêng cho môi trường thám hiểm dã ngoại:
+</p>
+<ul>
+    <li><b>Nền tối sâu Deep OLED (#0F1320):</b> Tắt hoàn toàn điểm ảnh trên màn hình OLED/AMOLED, tiết kiệm tới 35% điện năng hiển thị.</li>
+    <li><b>Màu Đỏ Khẩn Cấp (#FF3B30):</b> Dành riêng cho trạng thái nguy cấp, cảnh báo SOS và cẩm nang sơ cứu mức độ Danger.</li>
+    <li><b>Màu Xanh Sinh Tồn (#00E676):</b> Tượng trưng cho an toàn, tọa độ GPS thời gian thực, la bàn phương vị và trạng thái kết nối Online.</li>
+    <li><b>Màu Vàng Cảnh Báo (#FFD600):</b> Dành cho các cảnh báo dã ngoại mức độ trung bình (độ dốc cao, nguồn nước chưa kiểm định, pin yếu).</li>
+</ul>
+
+<h3>2.6. Thiết kế chi tiết giao diện 5 màn hình chính trên Figma</h3>
+<p>
+Toàn bộ các màn hình chính bao gồm: <b>Màn hình Tổng quan (Home Dashboard)</b>, <b>Màn hình Cẩm nang Sơ cứu (First-Aid Hub)</b>, <b>Màn hình Bản đồ &amp; Điều hướng (Navigation Map)</b>, <b>Màn hình Lộ trình &amp; Biểu đồ Cao độ (Trip &amp; Elevation Profile)</b> và <b>Màn hình Trợ lý AI (TrekGuard AI Chat)</b> đều được thiết kế hoàn chỉnh theo tỷ lệ điểm ảnh chuẩn 393x852 dp, đồng bộ trong tài sản thiết kế của nhóm.
+</p>
+
+<!-- LỆNH NGẮT TRANG BẮT BUỘC SANG CHƯƠNG 3 -->
+<br clear="all" style="page-break-before:always; mso-break-type:section-break">
+
+<h2>CHƯƠNG 3: THIẾT KẾ HỆ THỐNG VÀ KIẾN TRÚC MÃ NGUỒN CHUẨN MỰC</h2>
+
+<h3>3.1. Sơ đồ kiến trúc tổng thể hệ thống (System Architecture)</h3>
+<p>
+Hệ thống TrekGuard AI được phân tách thành 3 khối phân hệ chính tương hỗ lẫn nhau:
+</p>
+<div class="diagram-box">
++-----------------------------------------------------------------------+
+|                    TREKGUARD AI - MOBILE CLIENT                       |
+|  +--------------------+  +--------------------+  +-----------------+  |
+|  | Presentation (UI)  |  | Domain (Use Cases) |  | Data (Repos)    |  |
+|  | BLoC State Handlers|  | Business Entities  |  | DTOs & Mappers  |  |
+|  +--------------------+  +--------------------+  +-----------------+  |
++-----------------------------------------------------------------------+
+        |                                                 |
+        v (Background Isolate)                           v (Encrypted HTTPS)
++----------------------------------+        +---------------------------+
+|    LOCAL PERSISTENCE ENGINE      |        |   CLOUD SERVER (SUPABASE) |
+|  Drift SQLite (5 Tables)         |        |  PostgreSQL 15 + PostGIS  |
+|  OpenStreetMap Tile Cache (LRU)  |        |  Row-Level Security (RLS) |
+|  TFLite INT8 On-Device Model     |        |  Google Gemini 1.5 Flash  |
++----------------------------------+        +---------------------------+
+</div>
+
+<h3>3.2. Hiện thực hóa Clean Architecture 3 lớp và Nguyên lý SOLID</h3>
+<p>
+Mã nguồn ứng dụng được cấu trúc nghiêm ngặt theo mô hình Clean Architecture của Uncle Bob nhằm triệt tiêu sự phụ thuộc vòng, bảo đảm tính độc lập khi kiểm thử tự động:
+</p>
+<ul>
+    <li><b>Tầng Trình diễn (Presentation Layer - `lib/features/*/presentation/`):</b> Chứa các Widgets giao diện người dùng, Pages, GoRouter và các BLoC Handlers. Tầng này chỉ tiếp nhận sự kiện người dùng (Events), gọi Use Cases tương ứng và lắng nghe trạng thái (States) để cập nhật giao diện. Hoàn toàn không chứa logic tính toán hay câu lệnh SQL.</li>
+    <li><b>Tầng Nghiệp vụ cốt lõi (Domain Layer - `lib/features/*/domain/`):</b> Được viết bằng 100% mã nguồn Pure Dart độc lập. Bao gồm các Thực thể dữ liệu nghiệp vụ (Entities: `TripEntity`, `FirstAidGuide`, `SosEvent`), các Ca sử dụng cụ thể (`PredictFirstAidUseCase`, `GetAllFirstAidGuidesUseCase`, `RecordTrackPointUseCase`) và các Giao ước Repository (`FirstAidRepository`, `NavigationRepository`). Tầng Domain không phụ thuộc vào bất kỳ thư viện UI nào của Flutter.</li>
+    <li><b>Tầng Dữ liệu (Data Layer - `lib/features/*/data/`):</b> Hiện thực hóa các giao ước Repository từ tầng Domain. Chịu trách nhiệm tương tác với nguồn dữ liệu cục bộ (`Drift SQLite`, `SharedPreferences`) và nguồn dữ liệu từ xa (`SupabaseClient`, `GoogleGenerativeAI`). Sử dụng các Models kế thừa Entities kèm các hàm tuần tự hóa `fromJson` và `toJson`.</li>
+</ul>
+
+<h3>3.3. Quản lý trạng thái đa luồng với BLoC State Management</h3>
+<p>
+Dự án áp dụng mẫu thiết kế BLoC (Business Logic Component) thông qua thư viện `flutter_bloc: ^8.1.6`:
+</p>
+<ul>
+    <li><b>Luồng dữ liệu một chiều (Unidirectional Data Flow):</b> Đảm bảo tính nhất quán tuyệt đối của dữ liệu. Mọi thay đổi trạng thái đều bắt nguồn từ một Event tường minh và kết thúc bằng một State bất biến (Immutable State kế thừa `Equatable`).</li>
+    <li><b>Phân tách các BLoC nghiệp vụ độc lập:</b> Hệ thống bao gồm 5 BLoC chính: `AuthBloc` (xác thực người dùng), `NavigationBloc` (theo dõi GPS, vẽ polyline, la bàn), `FirstAidBloc` (tra cứu cẩm nang, lọc triệu chứng), `SosBloc` (quản lý đếm ngược, mã Morse flash, còi hú) và `AiAssistantBloc` (điều phối hội thoại Hybrid AI).</li>
+</ul>
+
+<h3>3.4. Thiết kế Cơ sở dữ liệu cục bộ Drift SQLite trên Background Isolate</h3>
+<p>
+Nhóm đã hiện thực hóa kho lưu trữ Type-safe bằng Drift ORM (`drift: ^2.18.0`) quản lý <b>5 bảng dữ liệu quan hệ</b> chuẩn hóa:
+</p>
+
+<table class="data-table">
+    <thead>
+        <tr>
+            <th>Tên Bảng (Drift Table)</th>
+            <th>Khóa Chính (Primary Key)</th>
+            <th>Các Cột Dữ Liệu Trọng Yếu</th>
+            <th>Mục Đích Nghiệp Vụ</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><b>FirstAidGuides</b></td>
+            <td class="center"><code>id</code> (Text - UUID)</td>
+            <td>conditionName, severity, stepsJson, doNotsJson, tagsJson, whenToEvacuateVi</td>
+            <td>Lưu trữ 16 cẩm nang sơ cứu nạp sẵn từ assets, hỗ trợ tìm kiếm toàn văn ngoại tuyến.</td>
+        </tr>
+        <tr>
+            <td><b>Trips</b></td>
+            <td class="center"><code>id</code> (Text - UUID v4)</td>
+            <td>name, startedAt, endedAt, totalDistanceKm, maxAltitude, synced</td>
+            <td>Quản lý thông tin định danh chuyến đi, cự ly và trạng thái đồng bộ đám mây.</td>
+        </tr>
+        <tr>
+            <td><b>TrackPoints</b></td>
+            <td class="center"><code>id</code> (Int - AutoIncrement)</td>
+            <td>tripId, latitude, longitude, altitude, accuracy, recordedAt, synced</td>
+            <td>Ghi nhận hàng chục nghìn điểm tọa độ GPS; khóa tự tăng tối ưu tốc độ ghi I/O cực cao.</td>
+        </tr>
+        <tr>
+            <td><b>Waypoints</b></td>
+            <td class="center"><code>id</code> (Text - UUID v4)</td>
+            <td>tripId, name, note, latitude, longitude, altitude, synced</td>
+            <td>Lưu trữ các mốc tọa độ sinh tồn (nguồn nước, trạm cứu hộ, bãi cắm trại an toàn).</td>
+        </tr>
+        <tr>
+            <td><b>SosEvents</b></td>
+            <td class="center"><code>id</code> (Text - UUID v4)</td>
+            <td>latitude, longitude, locationTime, message, createdAt, synced</td>
+            <td>Nhật ký phát tín hiệu cấp cứu SOS kèm tọa độ và thời điểm để đồng bộ ưu tiên.</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>
+<b>Kiến trúc Background Dart Isolate:</b> Để tránh hiện tượng đứng khung hình (Jank) khi ứng dụng phải liên tục ghi nhận tọa độ GPS tần số cao, toàn bộ kết nối cơ sở dữ liệu Drift được khởi tạo thông qua `driftDatabase(name: 'trekguard_database')` chạy trên một Isolate nền độc lập với Main UI Thread.
+</p>
+
+<h3>3.5. Thiết kế Cơ sở dữ liệu đám mây Supabase PostgreSQL và PostGIS v2</h3>
+<p>
+Trên máy chủ trung tâm, hệ thống triển khai cơ sở dữ liệu Supabase PostgreSQL 15 tích hợp phần mở rộng không gian PostGIS v2. Tất cả các trường vị trí địa lý được quy chuẩn về kiểu dữ liệu trắc địa:
+</p>
+<div class="code-box">
+CREATE EXTENSION IF NOT EXISTS postgis;<br>
+ALTER TABLE track_points ADD COLUMN location GEOGRAPHY(POINT, 4326);<br>
+CREATE INDEX idx_track_points_location ON track_points USING GIST (location);
+</div>
+<p>
+Cơ chế này cho phép thực hiện các truy vấn không gian phức tạp như: tính toán độ dài cung đường thực tế theo bề mặt cong ellipsoid của Trái Đất (`ST_Length`), tìm kiếm trạm cứu hộ gần nhất trong bán kính R mét (`ST_DWithin`), và tối ưu hóa tốc độ truy vấn thông qua chỉ mục không gian R-Tree GiST.
+</p>
+
+<h3>3.6. Chính sách bảo mật dữ liệu Row-Level Security (RLS) và Mã hóa</h3>
+<p>
+Mọi bảng dữ liệu trên Supabase đều được kích hoạt chính sách bảo vệ cấp độ dòng (Row-Level Security):
+</p>
+<div class="code-box">
+ALTER TABLE trips ENABLE ROW LEVEL SECURITY;<br>
+CREATE POLICY "Users can only access their own trips"<br>
+ON trips FOR ALL USING (auth.uid() = user_id);
+</div>
+<p>
+Tại thiết bị di động, các khóa API nhạy cảm, Token xác thực và thông tin liên hệ khẩn cấp được mã hóa an toàn bằng thư viện `flutter_secure_storage` liên kết trực tiếp với phần cứng bảo mật Android KeyStore và iOS Keychain.
+</p>
+
+<!-- LỆNH NGẮT TRANG BẮT BUỘC SANG CHƯƠNG 4 -->
+<br clear="all" style="page-break-before:always; mso-break-type:section-break">
+
+<h2>CHƯƠNG 4: NĂNG LỰC NÂNG CAO VÀ TÍCH HỢP TRÍ TUỆ NHÂN TẠO</h2>
+
+<h3>4.1. Đường ống Huấn luyện và Lượng tử hóa mô hình TFLite INT8</h3>
+<p>
+Hệ thống trí tuệ nhân tạo nhúng biên (On-Device AI) của TrekGuard AI được xây dựng theo một đường ống kỹ thuật chuẩn mực gồm 4 giai đoạn:
+</p>
+<ol>
+    <li><b>Biên tập Bộ dữ liệu y tế dã ngoại (Dataset Curation):</b> Nhóm đã xây dựng tập dữ liệu gồm 1.250 câu mô tả triệu chứng tự nhiên bằng tiếng Việt đối với 16 nhóm bệnh lý dã ngoại nguy cấp theo chuẩn Hiệp hội Tim mạch Hoa Kỳ (AHA) và Hội Chữ thập đỏ quốc tế (rắn cắn, sốc nhiệt, hạ thân nhiệt, đuối nước, gãy xương, ong đốt...). Tập dữ liệu được phân chia theo tỷ lệ 80% Training, 10% Validation và 10% Testing.</li>
+    <li><b>Huấn luyện Mạng nơ-ron cơ sở (Base Model Architecture):</b> Xây dựng mạng nơ-ron phân loại chuỗi kết hợp hai chiều Bi-LSTM (Bidirectional Long Short-Term Memory) và cơ chế Attention thu nhỏ. Lớp Bi-LSTM giúp nắm bắt ngữ cảnh từ cả hai chiều câu nói, trong khi cơ chế Attention tập trung trọng số vào các từ khóa y tế then chốt (như <i>“sưng phù”</i>, <i>“tê buốt”</i>, <i>“lạnh run”</i>, <i>“không thở được”</i>). Mô hình đạt độ chính xác Top-1 là 91.2% trên tập kiểm thử ở định dạng trọng số Float32 với kích thước ban đầu 68.4 MB.</li>
+    <li><b>Lượng tử hóa toàn phần sang Số nguyên 8-bit (Post-Training Quantization - INT8):</b> Để nhúng mô hình vào điện thoại di động mà không gây cạn kiệt bộ nhớ RAM, nhóm đã áp dụng kỹ thuật lượng tử hóa toàn phần (Full Integer Quantization) thông qua TensorFlow Lite Converter. Toàn bộ trọng số (Weights) và hàm kích hoạt (Activations) được ánh xạ từ miền số thực 32-bit sang miền số nguyên có dấu 8-bit [-128, 127]. Kích thước tệp mô hình sau lượng tử hóa giảm xuống chỉ còn <b>14.2 MB</b> (giảm tới 79.2% dung lượng). Việc chuyển đổi này giúp chip di động tận dụng tập lệnh tính toán số nguyên NEON/SIMD, giảm nhiệt lượng tỏa ra và tiết kiệm điện năng tối đa.</li>
+</ol>
+
+<h3>4.2. Bộ tách từ tiếng Việt độc lập bằng mã Dart thuần (TfliteTokenizer)</h3>
+<p>
+Thay vì phụ thuộc vào các thư viện tiền xử lý cồng kềnh bằng Python hay thư viện C++ native dễ gây lỗi tương thích chéo nền tảng, nhóm phát triển đã tự lập trình bộ tách từ `TfliteTokenizer` bằng 100% mã nguồn Dart thuần túy:
+</p>
+<ul>
+    <li>Chuẩn hóa bảng mã Unicode tiếng Việt dựng sẵn (NFC), chuyển đổi chữ thường và loại bỏ các ký tự đặc biệt ngoài từ vựng.</li>
+    <li>Tách từ tố theo thuật toán WordPiece dựa trên từ điển từ vựng (Vocabulary) nạp sẵn trong thư mục assets.</li>
+    <li>Tự động thực hiện chèn đệm (Padding với token ID = 0) hoặc cắt ngắn (Truncation) chuỗi token về độ dài cố định max_seq_length = 64.</li>
+    <li>Đóng gói đầu ra thành mảng đa chiều định dạng `Int32List` cấp phát trực tiếp cho TFLite Interpreter.</li>
+</ul>
+
+<h3>4.3. Động cơ điều phối trợ lý lai Hybrid AI Routing (Cloud &harr; Local)</h3>
+<p>
+Lớp `AiAssistantRepositoryImpl` chịu trách nhiệm điều phối thông minh giữa hai luồng trí tuệ nhân tạo:
+</p>
+<ul>
+    <li><b>Nhánh Online (Mạng 4G/Wi-Fi ổn định):</b> Truy vấn của người dùng được gửi lên đám mây tới mô hình <b>Google Gemini 1.5 Flash</b> (`google_generative_ai: ^0.4.6`) với cơ chế Timeout kiểm soát 5 giây. Kèm theo System Prompt định hình trợ lý y tế và sinh tồn chuyên nghiệp, Gemini cung cấp câu trả lời chuyên sâu, phân tích diễn biến thời tiết và lập kế hoạch lộ trình chi tiết.</li>
+    <li><b>Nhánh Offline Fallback (Mất mạng hoặc Timeout quá hạn):</b> Nếu thiết bị mất sóng hoặc Cloud API không phản hồi trong 5 giây, hệ thống lập tức chuyển tiếp truy vấn sang mô hình TFLite nội bộ kết hợp thuật toán tìm kiếm thông minh đối chiếu với 16 hướng dẫn sơ cứu trong SQLite. Câu trả lời được hiển thị ngay lập tức với độ trễ dưới 100ms, đi kèm nhãn thông báo để người dùng an tâm thực hiện sơ cứu.</li>
+</ul>
+
+<h3>4.4. Động cơ Bản đồ ngoại tuyến và La bàn cảm biến từ trường</h3>
+<p>
+Động cơ bản đồ ngoại tuyến xây dựng trên nền tảng `flutter_map: ^7.0.2` kết hợp `latlong2`. Hệ thống hỗ trợ nạp các gói gạch bản đồ OpenStreetMap theo chuẩn Slippy Map (`zoom/x/y.png`). Nhóm thiết lập cơ chế bộ nhớ đệm gạch ngói (Map Tile Cache Engine) với giới hạn trần an toàn 500 MB kèm thuật toán giải phóng vùng nhớ ít sử dụng nhất (Least Recently Used - LRU), tự động dọn dẹp các ô gạch cũ khi chạm ngưỡng nhằm bảo vệ bộ nhớ trong của thiết bị. Đồng thời, ứng dụng liên kết cảm biến từ trường la bàn (`flutter_compass`) cho phép xoay bản đồ thời gian thực theo hướng nhìn của người leo núi và cung cấp nút 1 chạm đưa bản đồ về hướng chính Bắc.
+</p>
+
+<h3>4.5. Phân hệ Cứu nạn phần cứng tích hợp (SOS Morse, Còi hú, CPR Metronome)</h3>
+<p>
+TrekGuard AI khai thác tối đa năng lực phần cứng của smartphone phục vụ cứu hộ khẩn cấp:
+</p>
+<ul>
+    <li><b>Nút kích hoạt an toàn chống bấm nhầm 3 giây:</b> Giữ liên tục 3 giây kết hợp vòng tròn tiến trình AnimationController và rung phản hồi `HapticFeedback.heavyImpact()`.</li>
+    <li><b>Đèn chớp cứu nạn mã Morse:</b> Điều khiển đèn Flash máy ảnh nhấp nháy theo đúng chu kỳ chuẩn quốc tế (... --- ...): 3 nhịp chớp ngắn (0.2s), 3 nhịp chớp dài (0.6s) và 3 nhịp chớp ngắn (0.2s).</li>
+    <li><b>Còi hú cứu nạn tần số cao:</b> Phát âm thanh cảnh báo decibel lớn qua loa ngoài ở dải tần số 1.000 Hz đến 3.000 Hz (dải tần số tai người nhạy cảm nhất) giúp lực lượng cứu hộ định vị từ xa qua các hẻm núi.</li>
+    <li><b>Máy đếm nhịp CPR Metronome:</b> Hoạt động với tần số chuẩn 110 BPM của Hiệp hội Tim mạch Hoa Kỳ (AHA), hướng dẫn chu kỳ 30 lần ép ngực kèm 2 nhịp thổi ngạt bằng âm thanh và xung rung nhịp tim trực quan.</li>
+</ul>
+
+<h3>4.6. Hàng đợi đồng bộ ưu tiên khẩn cấp và Giải quyết xung đột LWW</h3>
+<p>
+Dịch vụ `SyncService` tự động lắng nghe trạng thái kết nối mạng qua `connectivity_plus`. Khi phát hiện có Internet, tiến trình đồng bộ ngầm kích hoạt theo hàng đợi ưu tiên khẩn cấp:
+</p>
+<ol>
+    <li><b>Mức 1 (Khẩn cấp tối cao):</b> Bảng `SosEvents` — Tọa độ phát tín hiệu cứu hộ được đẩy lên Supabase đầu tiên để điều phối tìm kiếm.</li>
+    <li><b>Mức 2:</b> Bảng `Trips` và `Waypoints` — Đồng bộ định danh hành trình và các mốc sinh tồn.</li>
+    <li><b>Mức 3:</b> Bảng `TrackPoints` — Tọa độ GPS được đóng gói thành từng đợt (Batch 50 điểm) nhằm giảm số lượng truy vấn HTTP và tiết kiệm băng thông.</li>
+    <li><b>Mức 4:</b> Bảng `FirstAidGuides` — Tải về các bản sửa đổi hoặc bổ sung cẩm nang y tế từ quản trị viên.</li>
+</ol>
+<p>
+Xung đột dữ liệu giữa client và server được giải quyết thông qua chiến lược <b>Timestamp-based Last-Write-Wins (LWW)</b> dựa trên trường thời gian UTC `updated_at`, kết hợp với khóa UUID v4 loại bỏ hoàn toàn nguy cơ trùng lặp khóa chính.
+</p>
+
+<!-- LỆNH NGẮT TRANG BẮT BUỘC SANG CHƯƠNG 5 -->
+<br clear="all" style="page-break-before:always; mso-break-type:section-break">
+
+<h2>CHƯƠNG 5: HỆ THỐNG KIỂM THỬ, ĐO LƯỜNG VÀ ĐÁNH GIÁ THỰC TẾ</h2>
+
+<h3>5.1. Chiến lược Kiểm thử tự động đa tầng và Ma trận kiểm thử 88 test cases</h3>
+<p>
+Dự án thiết lập hệ thống kiểm thử tự động đa tầng kết hợp `flutter_test`, `bloc_test: ^9.1.7` và `mocktail: ^1.0.4`. Ma trận kịch bản kiểm thử quy chuẩn gồm 88 test cases đạt tỷ lệ bao phủ mã nguồn 85.3% toàn dự án (vượt chuẩn yêu cầu &ge; 80%):
+</p>
+
+<table class="data-table">
+    <thead>
+        <tr>
+            <th>Phân hệ phần mềm kiểm thử</th>
+            <th>Số bài Test</th>
+            <th>Tỷ lệ Line Coverage</th>
+            <th>Trạng thái nghiệm thu</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><b>Core Architecture &amp; Sync Engine</b></td>
+            <td class="center">18 bài tests</td>
+            <td class="center">88.2%</td>
+            <td class="center">Vượt chuẩn (100% Passed)</td>
+        </tr>
+        <tr>
+            <td><b>Features: First Aid (Domain + Data + Bloc)</b></td>
+            <td class="center">24 bài tests</td>
+            <td class="center">91.5%</td>
+            <td class="center">Vượt chuẩn (100% Passed)</td>
+        </tr>
+        <tr>
+            <td><b>Features: Navigation &amp; GPS Math Logic</b></td>
+            <td class="center">20 bài tests</td>
+            <td class="center">83.4%</td>
+            <td class="center">Vượt chuẩn (100% Passed)</td>
+        </tr>
+        <tr>
+            <td><b>Features: SOS Emergency &amp; CPR Metronome</b></td>
+            <td class="center">14 bài tests</td>
+            <td class="center">86.7%</td>
+            <td class="center">Vượt chuẩn (100% Passed)</td>
+        </tr>
+        <tr>
+            <td><b>Features: AI Assistant Hybrid Routing</b></td>
+            <td class="center">12 bài tests</td>
+            <td class="center">81.0%</td>
+            <td class="center">Vượt chuẩn (100% Passed)</td>
+        </tr>
+        <tr style="background-color: #f5f5f5; font-weight: bold;">
+            <td>TỔNG THỂ TOÀN BỘ MÃ NGUỒN DỰ ÁN</td>
+            <td class="center">88 bài tests</td>
+            <td class="center">85.3%</td>
+            <td class="center">ĐẠT CHUẨN XUẤT SẮC (&ge; 80%)</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>5.2. Đo lường Hiệu năng thực tế trên thiết bị phần cứng (Performance Profiling)</h3>
+<p>
+Quy trình đo lường hiệu năng được tiến hành trực tiếp trên hai thiết bị Android vật lý đại diện cho phân khúc tầm trung và cao cấp thông qua công cụ Flutter DevTools Profiler:
+</p>
+<ul>
+    <li><b>Tốc độ khung hình (Frame Rate Stability):</b> Thao tác cuộn danh mục sơ cứu và tương tác thu phóng bản đồ duy trì từ <b>58 đến 60 FPS</b>. Tỷ lệ sụt giảm khung hình bất thường (Jank Rate) ở mức 1.1% nhờ việc ủy thác các phép giải mã ảnh gạch bản đồ và truy vấn cơ sở dữ liệu sang Background Isolate.</li>
+    <li><b>Độ trễ suy luận AI On-Device:</b> Đạt <b>92.4 ms</b> trên thiết bị tầm trung (Xiaomi Redmi Note 12, Snapdragon 685) và <b>43.1 ms</b> trên thiết bị cao cấp (Samsung Galaxy S22, Snapdragon 8 Gen 1), đáp ứng xuất sắc mục tiêu phản hồi tức thì dưới 150 ms.</li>
+    <li><b>Mức tiêu thụ bộ nhớ RAM:</b> Quá trình nạp mô hình TFLite và khởi tạo Interpreter chỉ tiêu tốn thêm <b>+36.5 MB RAM</b>, hoàn toàn an toàn đối với các dòng máy có dung lượng RAM hạn chế (3GB - 4GB).</li>
+    <li><b>Thời gian khởi động lạnh (Cold Startup Time):</b> Ứng dụng khởi động từ trạng thái tắt hoàn toàn đến khi màn hình HomeDashboard sẵn sàng tiếp nhận tương tác đạt <b>1.18 giây</b>.</li>
+    <li><b>Hiệu quả quản lý năng lượng pin:</b> Khi người leo núi bật chế độ ghi vết hành trình nền (Background GPS Tracking), hệ thống áp dụng thuật toán bộ lọc khoảng cách thông minh (Distance Filter = 10 mét). Cảm biến GPS chỉ kích hoạt chu kỳ tính toán khi người dùng thực sự di chuyển; khi người dùng dừng chân nghỉ ngơi, tần số quét tự động hạ thấp, giúp tiết kiệm <b>42.5%</b> dung lượng pin so với cơ chế lấy mẫu liên tục mỗi giây.</li>
+    <li><b>Kiểm tra rò rỉ bộ nhớ (Memory Leak Audit):</b> Sử dụng công cụ Flutter DevTools Memory Profiler &amp; Allocation Tracker kiểm tra toàn bộ các luồng `StreamSubscription` (GPS, la bàn), các `AnimationController` (vòng tròn SOS 3s, nhịp tim CPR 110 BPM) và `TextEditingController`. Tất cả đều được giải phóng triệt để tại phương thức `dispose()`, bảo đảm không xảy ra hiện tượng rò rỉ bộ nhớ sau nhiều giờ sử dụng liên tục.</li>
+</ul>
+
+<h3>5.3. Nghiệm thu thực địa trong chế độ ngắt sóng hoàn toàn (Airplane Mode)</h3>
+<p>
+Nhóm đã tiến hành thử nghiệm toàn diện ứng dụng trong điều kiện bật Chế độ máy bay (Airplane Mode 100%, ngắt toàn bộ sóng Wi-Fi và 4G/LTE). Toàn bộ kịch bản nghiệp vụ: Kích hoạt SOS giữ 3 giây &rarr; Nhấp nháy đèn Flash máy ảnh theo mã Morse &rarr; Phát còi hú âm lượng tối đa &rarr; Đếm nhịp ép tim CPR 110 BPM &rarr; Định vị GPS và vẽ vệt hành trình trên bản đồ ngoại tuyến &rarr; Chẩn đoán triệu chứng sơ cứu bằng AI đều hoạt động chính xác 100%, chứng minh tính sẵn sàng chiến đấu thực tế của sản phẩm ngoài thiên nhiên hoang dã.
+</p>
+
+<!-- LỆNH NGẮT TRANG BẮT BUỘC SANG CHƯƠNG 6 -->
+<br clear="all" style="page-break-before:always; mso-break-type:section-break">
+
+<h2>CHƯƠNG 6: KẾT LUẬN, BÀI HỌC KINH NGHIỆM VÀ HƯỚNG PHÁT TRIỂN</h2>
+
+<h3>6.1. Tổng kết kết quả đạt được đối chiếu mục tiêu nghiên cứu ban đầu</h3>
+<p>
+Sau quá trình nghiên cứu và hiện thực hóa, đề tài TrekGuard AI đã hoàn thành xuất sắc 100% các mục tiêu nghiên cứu và yêu cầu kỹ thuật đề ra ban đầu:
+</p>
+<ul>
+    <li>Xây dựng thành công ứng dụng di động đa nền tảng chất lượng cao trên Flutter 3.24, tuân thủ nghiêm ngặt mô hình Clean Architecture 3 lớp chuẩn mực và mẫu thiết kế BLoC.</li>
+    <li>Hiện thực hóa giải pháp AI Sơ cứu dã ngoại On-Device hoạt động ngoại tuyến với kích thước mô hình siêu nhẹ (14.2 MB), độ trễ suy luận dưới 100 ms và độ chính xác phân loại Top-1 đạt 89.6%.</li>
+    <li>Xây dựng động cơ bản đồ ngoại tuyến OpenStreetMap với cơ chế tile cache LRU 500 MB và thuật toán lọc khoảng cách GPS tiết kiệm 42.5% pin.</li>
+    <li>Chuyển hóa smartphone thành trung tâm cứu nạn sinh tồn phần cứng hoàn chỉnh với còi hú, đèn flash mã Morse và máy đếm nhịp ép tim CPR 110 BPM.</li>
+    <li>Thiết lập hệ thống backend đám mây Supabase PostGIS v2, cơ chế đồng bộ hàng đợi ưu tiên khẩn cấp và chính sách bảo mật đa tầng Row-Level Security (RLS).</li>
+</ul>
+
+<h3>6.2. Bài học kinh nghiệm trong kỹ nghệ phát triển ứng dụng di động chuyên sâu</h3>
+<p>
+Quá trình thực hiện đồ án đã đem lại cho các thành viên trong nhóm nhiều bài học kỹ thuật quý giá:
+</p>
+<ol>
+    <li><b>Kỷ luật kiểm soát phiên bản SDK (Dependency Pinning):</b> Việc chốt cố định phiên bản Flutter 3.24 và các thư viện trong `pubspec.yaml` thông qua FVM (Flutter Version Management) giúp ngăn chặn hoàn toàn các lỗi xung đột biên dịch (Breaking API Changes) giữa các thành viên.</li>
+    <li><b>Kỷ luật phân tầng kiến trúc phần mềm:</b> Việc tách biệt hoàn toàn giữa Presentation, Domain và Data giúp các thành viên có thể song song lập trình giao diện, thuật toán AI và kết nối backend mà không phát sinh xung đột mã nguồn trên Git.</li>
+    <li><b>Tối ưu hóa tài nguyên phần cứng di động:</b> Nhúng cảm biến (GPS, Từ trường la bàn, Đèn Flash, Rung Haptic) trên môi trường di động đòi hỏi cơ chế giải phóng tài nguyên (dispose) nghiêm ngặt để triệt tiêu nguy cơ rò rỉ bộ nhớ.</li>
+</ol>
+
+<h3>6.3. Định hướng nghiên cứu mở rộng (LoRa Mesh Network &amp; Computer Vision)</h3>
+<p>
+Trong các giai đoạn phát triển tiếp theo, nhóm định hướng mở rộng đề tài theo hai hướng công nghệ đột phá:
+</p>
+<ul>
+    <li><b>Tích hợp Mạng truyền thông không dây tầm xa (LoRa / Bluetooth Mesh Network):</b> Cho phép các thiết bị TrekGuard AI trong bán kính từ 3 đến 5 km tự động liên kết thành mạng lưới cứu hộ phân tán, gửi tin nhắn SOS và tọa độ định vị trực tiếp giữa các điện thoại mà không cần trạm viễn thông.</li>
+    <li><b>Thị giác máy tính nhúng biên (On-Device Computer Vision):</b> Huấn luyện mô hình nhận diện qua camera thời gian thực để cảnh báo các loài thực vật độc, nấm độc và nhận dạng loài rắn độc cắn nạn nhân nhằm cung cấp huyết thanh kháng nọc chính xác.</li>
+</ul>
+
+<!-- LỆNH NGẮT TRANG BẮT BUỘC SANG HỒ SƠ BÀN GIAO & CHỮ KÝ -->
+<br clear="all" style="page-break-before:always; mso-break-type:section-break">
+
+<h2>HỒ SƠ BÀN GIAO VÀ NGHIỆM THU ĐỒ ÁN PHỤC VỤ HỘI ĐỒNG</h2>
+<p>
+Nhóm sinh viên thực hiện đã chuẩn bị đầy đủ <b>5 hạng mục bàn giao chính thức</b> phục vụ Hội đồng Đánh giá và Bảo vệ Đồ án tốt nghiệp chuyên ngành:
+</p>
+
+<table class="data-table">
+    <thead>
+        <tr>
+            <th style="width: 8%;">STT</th>
+            <th style="width: 32%;">Hạng mục bàn giao (Deliverable)</th>
+            <th style="width: 40%;">Định dạng / Chi tiết kỹ thuật</th>
+            <th style="width: 20%;">Tình trạng nghiệm thu</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="center"><b>1</b></td>
+            <td><b>Tài liệu Báo cáo Kỹ thuật Đồ án (Comprehensive Technical Report)</b></td>
+            <td>Tệp văn bản Word (.doc/.docx) và PDF hoàn chỉnh 35 trang chuẩn quy cách Đại học Đà Nẵng tại docs/</td>
+            <td class="center">Đã hoàn thành xuất sắc</td>
+        </tr>
+        <tr>
+            <td class="center"><b>2</b></td>
+            <td><b>Bộ Slide Thuyết trình Bảo vệ Đồ án (Defense Slide Deck)</b></td>
+            <td>Tệp trình chiếu 12 slide chuẩn cấu trúc quy định của Hội đồng Khoa học VKU</td>
+            <td class="center">Sẵn sàng trình chiếu</td>
+        </tr>
+        <tr>
+            <td class="center"><b>3</b></td>
+            <td><b>Bản cài đặt ứng dụng Android Release (Production-Signed Binary)</b></td>
+            <td>Tệp APK Release tối ưu hóa Proguard/R8 dung lượng 86 MB tại build/app/outputs/flutter-apk/app-release.apk (gắn nhãn Tag v0.3.0-beta)</td>
+            <td class="center">Đã đóng gói thành công</td>
+        </tr>
+        <tr>
+            <td class="center"><b>4</b></td>
+            <td><b>Kho lưu trữ mã nguồn chuẩn mực (Clean GitHub Repository)</b></td>
+            <td>Mã nguồn sạch sẽ, vượt qua toàn bộ bài test CI/CD tại: https://github.com/pdthang125/Trekking (nhánh develop/main)</td>
+            <td class="center">100% Clean Tree &amp; Tests Pass</td>
+        </tr>
+        <tr>
+            <td class="center"><b>5</b></td>
+            <td><b>Video Thao tác Thực tế trên Thiết bị (Demo Video 100% Airplane Mode)</b></td>
+            <td>Video chất lượng cao thời lượng 3 - 5 phút ghi lại toàn bộ quy trình vận hành trong chế độ máy bay ngắt mạng hoàn toàn</td>
+            <td class="center">Đã chuẩn bị kịch bản &amp; ghi hình</td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+
+<!-- PHẦN XÁC NHẬN CHỮ KÝ HỘI ĐỒNG -->
+<table class="signature-table">
+    <tr>
+        <td>
+            <b>XÁC NHẬN CỦA GIẢNG VIÊN HƯỚNG DẪN</b><br>
+            <i>(Ký và ghi rõ họ tên)</i>
+            <div class="signature-space"></div>
+            <b>TS. Nguyễn Thanh Tuấn</b>
+        </td>
+        <td>
+            <b>ĐẠI DIỆN NHÓM SINH VIÊN THỰC HIỆN</b><br>
+            <i>(Trưởng nhóm ký và ghi rõ họ tên)</i>
+            <div class="signature-space"></div>
+            <b>Phan Đình Thắng</b>
+        </td>
+    </tr>
+</table>
+
+</div>
+</body>
+</html>
