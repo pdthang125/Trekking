@@ -52,10 +52,17 @@ class AiAssistantBlocHandler extends Bloc<AiAssistantEvent, AiAssistantState> {
     final query = event.query.trim();
     if (query.isEmpty) return;
 
-    // Hiển thị trạng thái đang suy nghĩ nhưng giữ lại lịch sử tin nhắn
-    final currentHistory = _getChatHistory();
+    // Hiển thị ngay tin nhắn người dùng và trạng thái đang suy nghĩ
+    final userPreview = ChatMessageEntity(
+      id: 'preview_${DateTime.now().millisecondsSinceEpoch}',
+      text: query,
+      isUser: true,
+      source: MessageSource.user,
+      timestamp: DateTime.now(),
+    );
+    final currentHistory = [..._getChatHistory(), userPreview];
     emit(AiAssistantLoading(
-      messages: List.from(currentHistory),
+      messages: currentHistory,
       isOnline: state.isOnline,
     ));
 
